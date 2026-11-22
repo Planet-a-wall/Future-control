@@ -1,0 +1,302 @@
+{
+ "grid": [
+  {
+   "P": {
+    "sleep_mean": 7.5,
+    "k_work": 1.0,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.137
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.5,
+    "k_work": 1.0,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.137
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.5,
+    "k_work": 1.5,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.137
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.5,
+    "k_work": 1.5,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.137
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.6,
+    "k_work": 1.0,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.139
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.6,
+    "k_work": 1.0,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.14
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.6,
+    "k_work": 1.5,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.138
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.6,
+    "k_work": 1.5,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.14
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.7,
+    "k_work": 1.0,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.139
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.7,
+    "k_work": 1.0,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.141
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.7,
+    "k_work": 1.5,
+    "rho_fat": 0.08
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.14
+    ]
+   ]
+  },
+  {
+   "P": {
+    "sleep_mean": 7.7,
+    "k_work": 1.5,
+    "rho_fat": 0.12
+   },
+   "n": 14,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.141
+    ]
+   ]
+  }
+ ],
+ "chosen": {
+  "habit_decay": 0.004,
+  "mu_max": 0.02,
+  "sigma": 0.1,
+  "beta": 0.03,
+  "dep_th": -2.1,
+  "elev_th": 2.7,
+  "mood_vol": 0.42,
+  "mood_pov": 0.1,
+  "mood_tau": 6.0,
+  "inertia": 2.0,
+  "a_c": 0.15,
+  "imp_mult": 0.3,
+  "spree": 0.25,
+  "a_f": 0.3,
+  "kelly_frac": 0.5,
+  "sleep_mean": 7.5,
+  "k_work": 1.0,
+  "rho_fat": 0.08
+ },
+ "oos": [
+  {
+   "seed": 101,
+   "sf": 9,
+   "anchors": 5,
+   "m": {
+    "mobility_Q1_to_Q5": 0.06725,
+    "rank_rank_slope": 0.4882574282069113,
+    "pareto_alpha": 1.2913463578656021,
+    "share_ever_great": 0.057175,
+    "great_then_fell": 0.11937035417577613,
+    "great_jailed": 0.01355487538259729,
+    "fallers_higher_conf": 0.5441548235791354,
+    "extrinsic_drive_drop": 0.06292075857486042,
+    "intrinsic_drive_drop": 0.013135415239911259,
+    "extr_minus_intr_drop": 0.04978534333494916,
+    "bankrupt_any": 0.071775,
+    "jailed_any": 0.0114,
+    "heirs_lost_half": 0.14,
+    "heirs_bankrupt": 0.04583333333333333,
+    "heirs_jailed": 0.012333333333333333,
+    "heirs_median_final": 5035.555110172485
+   },
+   "mm": {
+    "dep_lifetime": 0.163775,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04485,
+    "dep_OR_poor_vs_rich": 1.5899231861880467,
+    "short_sleep_share": 0.37145
+   },
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.14
+    ]
+   ]
+  },
+  {
+   "seed": 202,
+   "sf": 9,
+   "anchors": 5,
+   "m": {
+    "mobility_Q1_to_Q5": 0.07275,
+    "rank_rank_slope": 0.4961967471050605,
+    "pareto_alpha": 1.423294501027478,
+    "share_ever_great": 0.053725,
+    "great_then_fell": 0.1321544904606794,
+    "great_jailed": 0.011167985109353188,
+    "fallers_higher_conf": 0.41622352539948215,
+    "extrinsic_drive_drop": 0.05893078227821921,
+    "intrinsic_drive_drop": 0.010694546710188131,
+    "extr_minus_intr_drop": 0.04823623556803108,
+    "bankrupt_any": 0.07095,
+    "jailed_any": 0.01125,
+    "heirs_lost_half": 0.14383333333333334,
+    "heirs_bankrupt": 0.049,
+    "heirs_jailed": 0.010833333333333334,
+    "heirs_median_final": 5018.1151439553805
+   },
+   "mm": {
+    "dep_lifetime": 0.163475,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.044325,
+    "dep_OR_poor_vs_rich": 1.6246796425270749,
+    "short_sleep_share": 0.372225
+   },
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.144
+    ]
+   ]
+  },
+  {
+   "seed": 303,
+   "sf": 9,
+   "anchors": 5,
+   "m": {
+    "mobility_Q1_to_Q5": 0.069875,
+    "rank_rank_slope": 0.49413551401614736,
+    "pareto_alpha": 1.3011578329175943,
+    "share_ever_great": 0.056875,
+    "great_then_fell": 0.10153846153846154,
+    "great_jailed": 0.012307692307692308,
+    "fallers_higher_conf": 0.38266791670313083,
+    "extrinsic_drive_drop": 0.06056474303575617,
+    "intrinsic_drive_drop": 0.01125402234423443,
+    "extr_minus_intr_drop": 0.049310720691521745,
+    "bankrupt_any": 0.072075,
+    "jailed_any": 0.011975,
+    "heirs_lost_half": 0.12683333333333333,
+    "heirs_bankrupt": 0.041666666666666664,
+    "heirs_jailed": 0.0085,
+    "heirs_median_final": 5070.070380918019
+   },
+   "mm": {
+    "dep_lifetime": 0.16345,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.044225,
+    "dep_OR_poor_vs_rich": 1.6965488375847362,
+    "short_sleep_share": 0.3717
+   },
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.127
+    ]
+   ]
+  }
+ ]
+}

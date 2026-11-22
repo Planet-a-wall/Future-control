@@ -1,0 +1,391 @@
+{
+ "grid": [
+  {
+   "sat_k": 3.0,
+   "total": 18,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.184
+    ],
+    [
+     "extr_minus_intr_drop",
+     0.002
+    ]
+   ]
+  },
+  {
+   "sat_k": 5.0,
+   "total": 18,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.184
+    ],
+    [
+     "extr_minus_intr_drop",
+     0.019
+    ]
+   ]
+  },
+  {
+   "sat_k": 8.0,
+   "total": 19,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.184
+    ]
+   ]
+  },
+  {
+   "sat_k": 12.0,
+   "total": 19,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.184
+    ]
+   ]
+  }
+ ],
+ "chosen": {
+  "habit_decay": 0.004,
+  "mu_max": 0.02,
+  "sigma": 0.1,
+  "beta": 0.03,
+  "dep_th": -2.1,
+  "elev_th": 2.7,
+  "mood_vol": 0.42,
+  "mood_pov": 0.1,
+  "mood_tau": 6.0,
+  "inertia": 2.0,
+  "a_c": 0.15,
+  "imp_mult": 0.3,
+  "spree": 0.25,
+  "a_f": 0.3,
+  "kelly_frac": 0.5,
+  "sleep_mean": 7.5,
+  "k_work": 1.0,
+  "rho_fat": 0.08,
+  "cap_tax": 0.15,
+  "r": 0.004,
+  "ret_prem": 0.001,
+  "sat_k": 8.0
+ },
+ "oos": [
+  {
+   "sf": 9,
+   "anchors": 5,
+   "dyn": 5,
+   "total": 19,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.18
+    ]
+   ],
+   "dyn_vals": {
+    "D1_parent_child_rank": 0.43478778393586726,
+    "D2_heir_lost_half_vs_founder": 0.5025,
+    "D3_top1_after_3_gen": 0.1225,
+    "S1_gini_drift": -0.007124702050237519,
+    "S2_top1_share_ratio": 1.0221787170367476
+   },
+   "mm": {
+    "dep_lifetime": 0.174675,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04275,
+    "dep_OR_poor_vs_rich": 1.5141116839455495,
+    "short_sleep_share": 0.3967
+   },
+   "m": {
+    "mobility_Q1_to_Q5": 0.05225,
+    "rank_rank_slope": 0.43376322002210244,
+    "pareto_alpha": 1.9381599809909535,
+    "share_ever_great": 0.019625,
+    "great_then_fell": 0.21019108280254778,
+    "great_jailed": 0.014012738853503185,
+    "fallers_higher_conf": 0.47092259295130257,
+    "extrinsic_drive_drop": 0.030780328860877112,
+    "intrinsic_drive_drop": -0.008371330374710478,
+    "extr_minus_intr_drop": 0.03915165923558759,
+    "bankrupt_any": 0.08415,
+    "jailed_any": 0.01605,
+    "heirs_lost_half": 0.17973398669933496,
+    "heirs_bankrupt": 0.06632831641582079,
+    "heirs_jailed": 0.01032551627581379,
+    "heirs_median_final": 6422.615644311607
+   },
+   "gens": [
+    {
+     "gen": 0,
+     "gini": 0.7062043638874679,
+     "alpha": 1.9097283280195176,
+     "top1_share": 0.2396310946196497,
+     "median": 3.602880248252715,
+     "bankrupt": 0.0847,
+     "jailed": 0.017375,
+     "dep": 0.1726,
+     "mobility_Q1_to_Q5": 0.05625,
+     "rank_rank_start_end": 0.4282363031713976
+    },
+    {
+     "gen": 1,
+     "gini": 0.6899792501400684,
+     "alpha": 1.8874319387947422,
+     "top1_share": 0.2158298758412507,
+     "median": 3.5113306302574303,
+     "bankrupt": 0.094625,
+     "jailed": 0.0148,
+     "dep": 0.181525,
+     "mobility_Q1_to_Q5": 0.055625,
+     "rank_rank_start_end": 0.4548917045496197,
+     "D1_parent_child_rank": 0.43478778393586726,
+     "D2_heir_lost_half_vs_founder": 0.5025,
+     "heir_lost_half_vs_own_inheritance": 0.23,
+     "founder_lineage_still_top1": 0.43
+    },
+    {
+     "gen": 2,
+     "gini": 0.6861616241979271,
+     "alpha": 1.9045328636893726,
+     "top1_share": 0.22127746142169852,
+     "median": 3.4964831062702886,
+     "bankrupt": 0.0929,
+     "jailed": 0.01355,
+     "dep": 0.1827,
+     "mobility_Q1_to_Q5": 0.05875,
+     "rank_rank_start_end": 0.4532980108346243,
+     "D1_parent_child_rank": 0.4320080392091302,
+     "founder_lineage_still_top1": 0.23
+    },
+    {
+     "gen": 3,
+     "gini": 0.6828545480898309,
+     "alpha": 1.9134299590517283,
+     "top1_share": 0.22061670558561017,
+     "median": 3.474286096123606,
+     "bankrupt": 0.092425,
+     "jailed": 0.0137,
+     "dep": 0.1768,
+     "mobility_Q1_to_Q5": 0.05875,
+     "rank_rank_start_end": 0.446261974872664,
+     "D1_parent_child_rank": 0.424283095581427,
+     "founder_lineage_still_top1": 0.1225
+    }
+   ],
+   "seed": 101
+  },
+  {
+   "sf": 9,
+   "anchors": 5,
+   "dyn": 5,
+   "total": 19,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.182
+    ]
+   ],
+   "dyn_vals": {
+    "D1_parent_child_rank": 0.43037434856860896,
+    "D2_heir_lost_half_vs_founder": 0.5375,
+    "D3_top1_after_3_gen": 0.1075,
+    "S1_gini_drift": -0.005872793656746422,
+    "S2_top1_share_ratio": 1.0194006286507342
+   },
+   "mm": {
+    "dep_lifetime": 0.175025,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04245,
+    "dep_OR_poor_vs_rich": 1.5111457316270656,
+    "short_sleep_share": 0.398475
+   },
+   "m": {
+    "mobility_Q1_to_Q5": 0.055125,
+    "rank_rank_slope": 0.44370406771443993,
+    "pareto_alpha": 1.9602187316157815,
+    "share_ever_great": 0.019375,
+    "great_then_fell": 0.21548387096774194,
+    "great_jailed": 0.01806451612903226,
+    "fallers_higher_conf": 0.35365676556814707,
+    "extrinsic_drive_drop": 0.028909267016549237,
+    "intrinsic_drive_drop": -0.008574245381738696,
+    "extr_minus_intr_drop": 0.037483512398287934,
+    "bankrupt_any": 0.0821,
+    "jailed_any": 0.015975,
+    "heirs_lost_half": 0.18183409170458523,
+    "heirs_bankrupt": 0.06842842142107106,
+    "heirs_jailed": 0.012425621281064054,
+    "heirs_median_final": 6439.531415095633
+   },
+   "gens": [
+    {
+     "gen": 0,
+     "gini": 0.6926459619350804,
+     "alpha": 2.0844658234406483,
+     "top1_share": 0.2062425877723447,
+     "median": 3.606574178162858,
+     "bankrupt": 0.084925,
+     "jailed": 0.0163,
+     "dep": 0.172675,
+     "mobility_Q1_to_Q5": 0.05325,
+     "rank_rank_start_end": 0.4455505111886566
+    },
+    {
+     "gen": 1,
+     "gini": 0.6885025902361241,
+     "alpha": 2.0246226950661095,
+     "top1_share": 0.21239654908294864,
+     "median": 3.512242454489357,
+     "bankrupt": 0.09265,
+     "jailed": 0.0158,
+     "dep": 0.180625,
+     "mobility_Q1_to_Q5": 0.058625,
+     "rank_rank_start_end": 0.4515766395913605,
+     "D1_parent_child_rank": 0.43037434856860896,
+     "D2_heir_lost_half_vs_founder": 0.5375,
+     "heir_lost_half_vs_own_inheritance": 0.265,
+     "founder_lineage_still_top1": 0.395
+    },
+    {
+     "gen": 2,
+     "gini": 0.6870642560865003,
+     "alpha": 2.0356429799351092,
+     "top1_share": 0.22137757108900252,
+     "median": 3.5111692185568217,
+     "bankrupt": 0.093825,
+     "jailed": 0.013425,
+     "dep": 0.1848,
+     "mobility_Q1_to_Q5": 0.06075,
+     "rank_rank_start_end": 0.44996513055579046,
+     "D1_parent_child_rank": 0.4314030721936896,
+     "founder_lineage_still_top1": 0.1975
+    },
+    {
+     "gen": 3,
+     "gini": 0.6826297965793777,
+     "alpha": 2.0351723683745817,
+     "top1_share": 0.21651717565840436,
+     "median": 3.4728043653975607,
+     "bankrupt": 0.0921,
+     "jailed": 0.013975,
+     "dep": 0.1774,
+     "mobility_Q1_to_Q5": 0.056875,
+     "rank_rank_start_end": 0.4456129009429455,
+     "D1_parent_child_rank": 0.4253113542567571,
+     "founder_lineage_still_top1": 0.1075
+    }
+   ],
+   "seed": 202
+  },
+  {
+   "sf": 8,
+   "anchors": 5,
+   "dyn": 5,
+   "total": 18,
+   "fails": [
+    [
+     "pareto_alpha",
+     2.025
+    ],
+    [
+     "heirs_lost_half",
+     0.181
+    ]
+   ],
+   "dyn_vals": {
+    "D1_parent_child_rank": 0.43335461213428406,
+    "D2_heir_lost_half_vs_founder": 0.545,
+    "D3_top1_after_3_gen": 0.12,
+    "S1_gini_drift": -0.005385228544669718,
+    "S2_top1_share_ratio": 1.0785427748265466
+   },
+   "mm": {
+    "dep_lifetime": 0.174225,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.0421,
+    "dep_OR_poor_vs_rich": 1.5895360465484376,
+    "short_sleep_share": 0.39775
+   },
+   "m": {
+    "mobility_Q1_to_Q5": 0.052,
+    "rank_rank_slope": 0.4372483582720305,
+    "pareto_alpha": 2.0246428798973746,
+    "share_ever_great": 0.01945,
+    "great_then_fell": 0.17480719794344474,
+    "great_jailed": 0.019280205655526992,
+    "fallers_higher_conf": 0.392157599543252,
+    "extrinsic_drive_drop": 0.02657772973119981,
+    "intrinsic_drive_drop": -0.00635953648116344,
+    "extr_minus_intr_drop": 0.03293726621236325,
+    "bankrupt_any": 0.08285,
+    "jailed_any": 0.01645,
+    "heirs_lost_half": 0.18113405670283514,
+    "heirs_bankrupt": 0.06807840392019601,
+    "heirs_jailed": 0.013475673783689185,
+    "heirs_median_final": 6421.282346675656
+   },
+   "gens": [
+    {
+     "gen": 0,
+     "gini": 0.7063569088223272,
+     "alpha": 1.895127637278023,
+     "top1_share": 0.23495789707910483,
+     "median": 3.628858791609895,
+     "bankrupt": 0.083575,
+     "jailed": 0.017125,
+     "dep": 0.1744,
+     "mobility_Q1_to_Q5": 0.048375,
+     "rank_rank_start_end": 0.4406520323118452
+    },
+    {
+     "gen": 1,
+     "gini": 0.6907141623565509,
+     "alpha": 1.9280902823310049,
+     "top1_share": 0.2107281406012266,
+     "median": 3.492540739370599,
+     "bankrupt": 0.0919,
+     "jailed": 0.015275,
+     "dep": 0.179925,
+     "mobility_Q1_to_Q5": 0.0565,
+     "rank_rank_start_end": 0.45538587017755383,
+     "D1_parent_child_rank": 0.43335461213428406,
+     "D2_heir_lost_half_vs_founder": 0.545,
+     "heir_lost_half_vs_own_inheritance": 0.24,
+     "founder_lineage_still_top1": 0.39
+    },
+    {
+     "gen": 2,
+     "gini": 0.7002666586690356,
+     "alpha": 2.059873511550674,
+     "top1_share": 0.2531212008477373,
+     "median": 3.5118062418064517,
+     "bankrupt": 0.093775,
+     "jailed": 0.012675,
+     "dep": 0.1834,
+     "mobility_Q1_to_Q5": 0.063375,
+     "rank_rank_start_end": 0.4531616762410385,
+     "D1_parent_child_rank": 0.43449070844405646,
+     "founder_lineage_still_top1": 0.22
+    },
+    {
+     "gen": 3,
+     "gini": 0.6853289338118812,
+     "alpha": 1.7870171987588634,
+     "top1_share": 0.22727931349808558,
+     "median": 3.4868541689502788,
+     "bankrupt": 0.09225,
+     "jailed": 0.013775,
+     "dep": 0.1774,
+     "mobility_Q1_to_Q5": 0.06075,
+     "rank_rank_start_end": 0.44684395528096504,
+     "D1_parent_child_rank": 0.4265082830333806,
+     "founder_lineage_still_top1": 0.12
+    }
+   ],
+   "seed": 303
+  }
+ ]
+}

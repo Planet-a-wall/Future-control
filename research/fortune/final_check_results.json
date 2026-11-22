@@ -1,0 +1,554 @@
+{
+ "H1": [
+  {
+   "lo": 0,
+   "hi": 1.0,
+   "n": 483,
+   "p_fall": 0.06832298136645963
+  },
+  {
+   "lo": 1.0,
+   "hi": 1.5,
+   "n": 797,
+   "p_fall": 0.20702634880803011
+  },
+  {
+   "lo": 1.5,
+   "hi": 2.0,
+   "n": 275,
+   "p_fall": 0.33090909090909093
+  },
+  {
+   "lo": 2.0,
+   "hi": 2.5,
+   "n": 39,
+   "p_fall": 0.5897435897435898
+  },
+  {
+   "lo": 2.5,
+   "hi": 10,
+   "n": 4,
+   "p_fall": 0.5
+  }
+ ],
+ "H4": {
+  "phi": [
+   {
+    "lo": 0,
+    "p_great": 0.015780529254673464,
+    "p_fall_given_great": 0.08205128205128205,
+    "p_jail": 0.029780691106255565,
+    "p_bankrupt": 0.09047503439346119
+   },
+   {
+    "lo": 0.25,
+    "p_great": 0.019850038033832,
+    "p_fall_given_great": 0.1678832116788321,
+    "p_jail": 0.02032093309667838,
+    "p_bankrupt": 0.08780381787227877
+   },
+   {
+    "lo": 0.5,
+    "p_great": 0.021547182151811343,
+    "p_fall_given_great": 0.23777403035413153,
+    "p_jail": 0.012172522800770321,
+    "p_bankrupt": 0.07670506158933178
+   },
+   {
+    "lo": 0.75,
+    "p_great": 0.02093487814622453,
+    "p_fall_given_great": 0.2480916030534351,
+    "p_jail": 0.00407510986815821,
+    "p_bankrupt": 0.07782660807031562
+   }
+  ],
+  "iota": [
+   {
+    "lo": 0,
+    "p_great": 0.0197397280304138,
+    "p_fall_given_great": 0.34074074074074073,
+    "p_jail": 0.05804942243017985,
+    "p_bankrupt": 0.08846322561778037
+   },
+   {
+    "lo": 0.4,
+    "p_great": 0.021698915054247286,
+    "p_fall_given_great": 0.22119815668202766,
+    "p_jail": 0.026948652567371632,
+    "p_bankrupt": 0.08469576521173941
+   },
+   {
+    "lo": 0.6,
+    "p_great": 0.018821987077441708,
+    "p_fall_given_great": 0.17744610281923714,
+    "p_jail": 0.010238162125042919,
+    "p_bankrupt": 0.08415269844242594
+   },
+   {
+    "lo": 0.8,
+    "p_great": 0.020167589830989915,
+    "p_fall_given_great": 0.15258215962441316,
+    "p_jail": 0.002414429768498793,
+    "p_bankrupt": 0.07726175259196137
+   }
+  ],
+  "ego": [
+   {
+    "lo": 0,
+    "p_great": 0.01671163721820872,
+    "p_fall_given_great": 0.07291666666666667,
+    "p_jail": 0.010009574375489598,
+    "p_bankrupt": 0.06963182174253633
+   },
+   {
+    "lo": 0.15,
+    "p_great": 0.020093874859381668,
+    "p_fall_given_great": 0.16216216216216217,
+    "p_jail": 0.015438923154505605,
+    "p_bankrupt": 0.0749059311842973
+   },
+   {
+    "lo": 0.3,
+    "p_great": 0.021981581748345597,
+    "p_fall_given_great": 0.26105263157894737,
+    "p_jail": 0.019621454023786386,
+    "p_bankrupt": 0.0923226433430515
+   },
+   {
+    "lo": 0.5,
+    "p_great": 0.022939588955781607,
+    "p_fall_given_great": 0.35294117647058826,
+    "p_jail": 0.0272991488478306,
+    "p_bankrupt": 0.11428274859871289
+   }
+  ]
+ },
+ "H2": [
+  {
+   "cohort": "poor",
+   "p_great": 0.0027,
+   "p_fall_given_great": 0.2222222222222222,
+   "p_final_ge_100": 0.00105,
+   "p_bankrupt": 0.14665,
+   "p_jail": 0.0034
+  },
+  {
+   "cohort": "middle",
+   "p_great": 0.00675,
+   "p_fall_given_great": 0.23703703703703705,
+   "p_final_ge_100": 0.00265,
+   "p_bankrupt": 0.07715,
+   "p_jail": 0.01085
+  },
+  {
+   "cohort": "rich",
+   "p_great": 0.15125,
+   "p_fall_given_great": 0.21520661157024792,
+   "p_final_ge_100": 0.0575,
+   "p_bankrupt": 0.06415,
+   "p_jail": 0.0183
+  },
+  {
+   "cohort": "heir/royal",
+   "p_great": 1.0,
+   "p_fall_given_great": 0.1082,
+   "p_final_ge_100": 0.9165,
+   "p_bankrupt": 0.06815,
+   "p_jail": 0.0123
+  }
+ ],
+ "H3": {
+  "average": {
+   "p_great": 0.00195,
+   "p_stay": 0.0015,
+   "p_fall_given_great": 0.23076923076923078,
+   "p_bankrupt": 0.1475,
+   "p_jail": 0.0033,
+   "median_final": 2.181425477174403,
+   "debt": 0.18478720382265487,
+   "fatigue": 0.08811102037313144,
+   "months_dep": 13.3657
+  },
+  "vision+drive": {
+   "p_great": 0.07635,
+   "p_stay": 0.05175,
+   "p_fall_given_great": 0.32220039292730845,
+   "p_bankrupt": 0.22335,
+   "p_jail": 0.0223,
+   "median_final": 3.0353021180671167,
+   "debt": 0.2935267169088023,
+   "fatigue": 0.10732113423418614,
+   "months_dep": 12.43785
+  },
+  "+high ego": {
+   "p_great": 0.1001,
+   "p_stay": 0.04145,
+   "p_fall_given_great": 0.5859140859140859,
+   "p_bankrupt": 0.3438,
+   "p_jail": 0.03395,
+   "median_final": 1.198150905422383,
+   "debt": 0.32455843503897275,
+   "fatigue": 0.10742610247083492,
+   "months_dep": 14.76125
+  },
+  "+high ego +low integrity": {
+   "p_great": 0.1025,
+   "p_stay": 0.0297,
+   "p_fall_given_great": 0.7102439024390244,
+   "p_bankrupt": 0.3767,
+   "p_jail": 0.147,
+   "median_final": 0.6452418430976299,
+   "debt": 0.33565270784999246,
+   "fatigue": 0.10622439710150561,
+   "months_dep": 21.0071
+  },
+  "+enjoys work": {
+   "p_great": 0.1047,
+   "p_stay": 0.06555,
+   "p_fall_given_great": 0.37392550143266473,
+   "p_bankrupt": 0.2206,
+   "p_jail": 0.00675,
+   "median_final": 3.4790460775601106,
+   "debt": 0.289800234759515,
+   "fatigue": 0.10837903678424564,
+   "months_dep": 11.80675
+  },
+  "+enjoys +low ego +integrity": {
+   "p_great": 0.07955,
+   "p_stay": 0.0714,
+   "p_fall_given_great": 0.10245128849780012,
+   "p_bankrupt": 0.1644,
+   "p_jail": 0.0001,
+   "median_final": 5.579433976801818,
+   "debt": 0.2672456140278903,
+   "fatigue": 0.10805776957038714,
+   "months_dep": 11.05505
+  }
+ },
+ "H5": {
+  "money only": [
+   {
+    "omega": 0.0,
+    "stay": 0.09305,
+    "median": 7.975426780160747
+   },
+   {
+    "omega": 0.05,
+    "stay": 0.0685,
+    "median": 5.581064532125724
+   },
+   {
+    "omega": 0.1,
+    "stay": 0.0406,
+    "median": 3.302850320154531
+   },
+   {
+    "omega": 0.2,
+    "stay": 0.0066,
+    "median": 0.3067129579992537
+   }
+  ],
+  "honest feedback": [
+   {
+    "omega": 0.0,
+    "stay": 0.09305,
+    "median": 7.975426780160747
+   },
+   {
+    "omega": 0.05,
+    "stay": 0.07245,
+    "median": 6.639717878264485
+   },
+   {
+    "omega": 0.1,
+    "stay": 0.03955,
+    "median": 4.078828234673852
+   },
+   {
+    "omega": 0.2,
+    "stay": 0.0043,
+    "median": 0.31888439801669133
+   }
+  ]
+ },
+ "H6": {
+  "stable": {
+   "none": {
+    "p_great": 0.07115,
+    "p_stay": 0.0513,
+    "p_fall_given_great": 0.27898805340829236,
+    "p_bankrupt": 0.1974,
+    "p_jail": 0.0233,
+    "median_final": 3.63942255723373,
+    "debt": 0.2936273664051698,
+    "fatigue": 0.10957344524908674,
+    "months_dep": 0.5988
+   }
+  },
+  "typical": {
+   "none": {
+    "p_great": 0.0558,
+    "p_stay": 0.0404,
+    "p_fall_given_great": 0.27598566308243727,
+    "p_bankrupt": 0.19975,
+    "p_jail": 0.021,
+    "median_final": 2.9500055838191455,
+    "debt": 0.280262865210949,
+    "fatigue": 0.10639257069219347,
+    "months_dep": 9.73665
+   },
+   "delay": {
+    "p_great": 0.0646,
+    "p_stay": 0.04625,
+    "p_fall_given_great": 0.28405572755417957,
+    "p_bankrupt": 0.19345,
+    "p_jail": 0.023,
+    "median_final": 3.3752377855060196,
+    "debt": 0.2884108956511777,
+    "fatigue": 0.10636274036257919,
+    "months_dep": 9.9059
+   },
+   "regulate": {
+    "p_great": 0.0642,
+    "p_stay": 0.04725,
+    "p_fall_given_great": 0.26401869158878505,
+    "p_bankrupt": 0.1925,
+    "p_jail": 0.0222,
+    "median_final": 3.622376806587287,
+    "debt": 0.2841509134102418,
+    "fatigue": 0.10732536719091745,
+    "months_dep": 4.65365
+   },
+   "precommit": {
+    "p_great": 0.0558,
+    "p_stay": 0.04125,
+    "p_fall_given_great": 0.260752688172043,
+    "p_bankrupt": 0.20045,
+    "p_jail": 0.02005,
+    "median_final": 3.072647058217924,
+    "debt": 0.27995413855860135,
+    "fatigue": 0.10625328202373717,
+    "months_dep": 10.67755
+   }
+  },
+  "daily swings": {
+   "none": {
+    "p_great": 0.02365,
+    "p_stay": 0.01935,
+    "p_fall_given_great": 0.18181818181818182,
+    "p_bankrupt": 0.30875,
+    "p_jail": 0.0115,
+    "median_final": 1.8159069910542827,
+    "debt": 0.26138780998851696,
+    "fatigue": 0.11258019069912202,
+    "months_dep": 0.00015
+   },
+   "delay": {
+    "p_great": 0.07005,
+    "p_stay": 0.05165,
+    "p_fall_given_great": 0.26266952177016417,
+    "p_bankrupt": 0.1967,
+    "p_jail": 0.0219,
+    "median_final": 3.78580791286943,
+    "debt": 0.3034146952436048,
+    "fatigue": 0.11212851108610794,
+    "months_dep": 5e-05
+   },
+   "regulate": {
+    "p_great": 0.0506,
+    "p_stay": 0.0385,
+    "p_fall_given_great": 0.2391304347826087,
+    "p_bankrupt": 0.20945,
+    "p_jail": 0.01825,
+    "median_final": 3.113546588162514,
+    "debt": 0.2892336725197911,
+    "fatigue": 0.1125211996974305,
+    "months_dep": 0.0
+   },
+   "precommit": {
+    "p_great": 0.03715,
+    "p_stay": 0.0274,
+    "p_fall_given_great": 0.26244952893674295,
+    "p_bankrupt": 0.33025,
+    "p_jail": 0.01425,
+    "median_final": 1.7104770405313554,
+    "debt": 0.27038627389017633,
+    "fatigue": 0.11242044990061587,
+    "months_dep": 0.00035
+   }
+  },
+  "depression-prone": {
+   "none": {
+    "p_great": 0.02015,
+    "p_stay": 0.0164,
+    "p_fall_given_great": 0.18610421836228289,
+    "p_bankrupt": 0.1481,
+    "p_jail": 0.014,
+    "median_final": 3.920236292426734,
+    "debt": 0.20488767110923453,
+    "fatigue": 0.08359337882465882,
+    "months_dep": 47.0639
+   }
+  },
+  "elevated-prone": {
+   "none": {
+    "p_great": 0.04065,
+    "p_stay": 0.02655,
+    "p_fall_given_great": 0.34686346863468637,
+    "p_bankrupt": 0.2872,
+    "p_jail": 0.01625,
+    "median_final": 1.3330116492925357,
+    "debt": 0.33041744707959314,
+    "fatigue": 0.11963346535188038,
+    "months_dep": 2.23775
+   },
+   "delay": {
+    "p_great": 0.058,
+    "p_stay": 0.03835,
+    "p_fall_given_great": 0.33879310344827585,
+    "p_bankrupt": 0.2193,
+    "p_jail": 0.02005,
+    "median_final": 2.2517968669514588,
+    "debt": 0.35133978816222533,
+    "fatigue": 0.11993816014756703,
+    "months_dep": 2.10815
+   },
+   "regulate": {
+    "p_great": 0.0736,
+    "p_stay": 0.04835,
+    "p_fall_given_great": 0.343070652173913,
+    "p_bankrupt": 0.22965,
+    "p_jail": 0.02245,
+    "median_final": 2.3760368045449733,
+    "debt": 0.3406808111570694,
+    "fatigue": 0.12089398355600597,
+    "months_dep": 0.6806
+   },
+   "precommit": {
+    "p_great": 0.03515,
+    "p_stay": 0.0258,
+    "p_fall_given_great": 0.26600284495021337,
+    "p_bankrupt": 0.26575,
+    "p_jail": 0.0127,
+    "median_final": 1.737907096091521,
+    "debt": 0.3209446983029741,
+    "fatigue": 0.11942732776324361,
+    "months_dep": 2.3996
+   }
+  },
+  "bipolar-like": {
+   "none": {
+    "p_great": 0.0192,
+    "p_stay": 0.01465,
+    "p_fall_given_great": 0.23697916666666666,
+    "p_bankrupt": 0.30025,
+    "p_jail": 0.0124,
+    "median_final": 2.0088264512244187,
+    "debt": 0.271665158287902,
+    "fatigue": 0.09682176716540937,
+    "months_dep": 47.36965
+   },
+   "delay": {
+    "p_great": 0.02625,
+    "p_stay": 0.0201,
+    "p_fall_given_great": 0.2342857142857143,
+    "p_bankrupt": 0.2194,
+    "p_jail": 0.0157,
+    "median_final": 2.6059408428178577,
+    "debt": 0.28492066374773883,
+    "fatigue": 0.09724951443369075,
+    "months_dep": 46.00185
+   },
+   "regulate": {
+    "p_great": 0.04215,
+    "p_stay": 0.03185,
+    "p_fall_given_great": 0.2443653618030842,
+    "p_bankrupt": 0.19565,
+    "p_jail": 0.01915,
+    "median_final": 2.9928889121315345,
+    "debt": 0.27878209481179367,
+    "fatigue": 0.10418013948130779,
+    "months_dep": 11.23445
+   },
+   "precommit": {
+    "p_great": 0.01665,
+    "p_stay": 0.01315,
+    "p_fall_given_great": 0.21021021021021022,
+    "p_bankrupt": 0.2954,
+    "p_jail": 0.0124,
+    "median_final": 2.131518215835457,
+    "debt": 0.27045579079211257,
+    "fatigue": 0.09668204971207633,
+    "months_dep": 48.21625
+   }
+  }
+ },
+ "H7": {
+  "good 7.8h | none": {
+   "p_great": 0.05945,
+   "p_stay": 0.04215,
+   "p_fall_given_great": 0.2910008410428932,
+   "p_bankrupt": 0.21295,
+   "p_jail": 0.0207,
+   "median_final": 2.7494038217359895,
+   "debt": 0.03790542239441797,
+   "fatigue": 0.10019631042992971,
+   "months_dep": 9.54955
+  },
+  "good 7.8h | protect sleep": {
+   "p_great": 0.0607,
+   "p_stay": 0.0431,
+   "p_fall_given_great": 0.2899505766062603,
+   "p_bankrupt": 0.21505,
+   "p_jail": 0.02035,
+   "median_final": 2.7719741486102203,
+   "debt": 0.0,
+   "fatigue": 0.09935532715703575,
+   "months_dep": 9.3962
+  },
+  "good 7.8h | routine only": {
+   "p_great": 0.06515,
+   "p_stay": 0.04775,
+   "p_fall_given_great": 0.2670759785111282,
+   "p_bankrupt": 0.19565,
+   "p_jail": 0.02175,
+   "median_final": 3.525066836687909,
+   "debt": 0.03815458184654125,
+   "fatigue": 0.09993939938026278,
+   "months_dep": 10.0656
+  },
+  "short 5.8h | none": {
+   "p_great": 0.01355,
+   "p_stay": 0.0109,
+   "p_fall_given_great": 0.19557195571955718,
+   "p_bankrupt": 0.16805,
+   "p_jail": 0.0118,
+   "median_final": 3.241426227355083,
+   "debt": 1.4736552213703824,
+   "fatigue": 0.13427894516704733,
+   "months_dep": 37.9431
+  },
+  "short 5.8h | protect sleep": {
+   "p_great": 0.0607,
+   "p_stay": 0.0431,
+   "p_fall_given_great": 0.2899505766062603,
+   "p_bankrupt": 0.21505,
+   "p_jail": 0.02035,
+   "median_final": 2.7719741486102203,
+   "debt": 0.0,
+   "fatigue": 0.09935532715703575,
+   "months_dep": 9.3962
+  },
+  "short 5.8h | routine only": {
+   "p_great": 0.02115,
+   "p_stay": 0.0162,
+   "p_fall_given_great": 0.23404255319148937,
+   "p_bankrupt": 0.15565,
+   "p_jail": 0.0164,
+   "median_final": 3.3699109864212797,
+   "debt": 1.4987556201932737,
+   "fatigue": 0.13435303012603864,
+   "months_dep": 41.1741
+  }
+ }
+}

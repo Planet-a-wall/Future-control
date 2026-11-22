@@ -35,15 +35,29 @@ DEFAULT = dict(
     goal_med=30.0, goal_sd=0.8, q_extr_free=0.7,
     lam_loss=1.5, fraud_pi=0.01, fraud_det=0.02,
     y_R=0.15, R_half=5.0, fb_gain=2.0, rho_R=0.01, rescue_p=0.6,
-    great=100.0,
+    great=100.0, cap_tax=0.0, ret_prem=0.0, sat_k=3.0,
     # --- mood module (multi-timescale mental state)
     mood_tau=6.0, mood_vol=0.5, mood_eta=0.15, mood_pov=0.10, a_q=0.3, a_c=0.3, a_v=0.1,
     spree=0.5, a_f=1.0, day_sd=0.6, days=22, theta_hi=2.0, theta_lo=-2.0, imp_act=0.3, imp_mult=1.0,
     dep_th=-1.2, elev_th=1.5, bipolar_share=0.03, inertia=0.0,
+    # --- sleep and fatigue module
+    sleep_mean=7.3, sleep_sd=0.8, k_work=1.5, k_elev=0.7, k_stress=1.0, sleep_need=7.0,
+    rho_fat=0.15, omega_fat=0.6, debt_rec=0.25, debt_mood=0.04, debt_day=0.15, debt_imp=0.2, debt_v=0.04,
+    protect_floor=7.5, breaks_gain=1.3,
 )
 ALL_OFF = dict(ratchet=False, goal_drive=False, hubris=False, loss_risk=False,
                fraud=False, merit=False, merit_feedback=False,
-               mood=False, precommit=False, regulate=False, delay=False)
+               mood=False, precommit=False, regulate=False, delay=False,
+               sleep=False, sleep_protect=False, breaks=False)
+
+
+def sleep_traits(N, rng, P=None, **over):
+    """Habitual sleep duration (hours/night)."""
+    P = {**DEFAULT, **(P or {})}
+    t = dict(S_base=np.clip(rng.normal(P["sleep_mean"], P["sleep_sd"], N), 4.5, 9.5))
+    for k, val in over.items():
+        t[k] = np.broadcast_to(np.asarray(val, float), (N,)).copy()
+    return t
 
 
 def mood_traits(N, rng, P=None, **over):
@@ -106,6 +120,11 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         n_dep = np.zeros(N, int); months_dep = np.zeros(N, int); months_elev = np.zeros(N, int)
         ever_elev = np.zeros(N, bool); imp_hi = np.zeros(N, int); imp_lo = np.zeros(N, int)
         m_sum = np.zeros(N); prev_ret = np.zeros(N)
+    use_sleep = fl["sleep"]
+    if use_sleep:
+        fat = np.zeros(N); debt = np.zeros(N); debt_sum = np.zeros(N); fat_sum = np.zeros(N)
+        short_months = np.zeros(N, int)
+        f_ref = P["rho_fat"] * 0.5 / (P["rho_fat"] * 0.5 + P["omega_fat"])
     np.seterr(over="ignore", invalid="ignore", divide="ignore")
     for t in range(P["T"]):
         if windfall is not None and t == 0:
@@ -113,7 +132,7 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
             peak = np.maximum(peak, K)
         # --- drive
         if fl["goal_drive"]:
-            q_extr = 1.0 / (1.0 + np.exp(-3.0 * (1.0 - np.maximum(K, 0) / tr["goal"])))
+            q_extr = 1.0 / (1.0 + np.exp(-P["sat_k"] * (1.0 - np.maximum(K, 0) / tr["goal"])))
         else:
             q_extr = np.full(N, P["q_extr_free"])
         q = tr["phi"] * tr["q_intr"] + (1 - tr["phi"]) * q_extr
@@ -125,15 +144,18 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         # --- mood: slow AR(1) with outcome feedback and poverty stress; daily extremes
         if use_mood:
             push = m_eta * np.tanh(prev_ret / 0.05) - P["mood_pov"] * (K < 0.3)
+            if use_sleep:
+                push = push - P["debt_mood"] * debt
             # emotional inertia: dynamics slow down inside the low-mood region (Kuppens et al. 2010)
             a_eff = np.where(m < P["dep_th"] + 0.5, np.exp(-1.0 / (tr["m_tau"] * (1 + P["inertia"]))), a_ar)
             m = tr["m_set"] + a_eff * (m - tr["m_set"]) + push + m_vol * np.sqrt(1 - a_eff ** 2) * rng_m.standard_normal(N)
             m = np.clip(m, -4, 4)
-            zhi = (P["theta_hi"] - m) / (d_sd * np.sqrt(2)); zlo = (m - P["theta_lo"]) / (d_sd * np.sqrt(2))
+            d_sd_t = d_sd * (1 + P["debt_day"] * debt) if use_sleep else d_sd
+            zhi = (P["theta_hi"] - m) / (d_sd_t * np.sqrt(2)); zlo = (m - P["theta_lo"]) / (d_sd_t * np.sqrt(2))
             ph = 0.5 * (1 - _erf(zhi)); pl = 0.5 * (1 - _erf(zlo))
             any_hi = rng_m.random(N) < 1 - (1 - ph) ** P["days"]
             any_lo = rng_m.random(N) < 1 - (1 - pl) ** P["days"]
-            act = 0.0 if fl["delay"] else P["imp_act"]
+            act = 0.0 if fl["delay"] else P["imp_act"] * ((1 + P["debt_imp"] * debt) if use_sleep else 1.0)
             hi_act = alive & any_hi & (rng_m.random(N) < act)
             lo_act = alive & any_lo & (rng_m.random(N) < act)
             imp_hi += hi_act; imp_lo += lo_act
@@ -146,8 +168,23 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
                 dep_durs.extend(run[ended].tolist())
             run = np.where(dep_now, run + 1, 0); in_dep = dep_now
             months_dep += dep_now; months_elev += elev_now; ever_elev |= elev_now; m_sum += m
+        # --- sleep and fatigue
+        if use_sleep:
+            dd_s = np.where(peak > 5.0, 1.0 - np.maximum(K, 0) / peak, 0.0)
+            S_t = tr["S_base"] - P["k_work"] * np.maximum(0, q - 0.6) - P["k_stress"] * np.clip(dd_s, 0, 1)
+            if use_mood:
+                S_t = S_t - P["k_elev"] * np.maximum(0, m - 1.0)
+            if fl["sleep_protect"]:
+                S_t = np.maximum(S_t, P["protect_floor"])
+            debt = 0.6 * debt + 0.4 * np.maximum(0, P["sleep_need"] - S_t)
+            om = P["omega_fat"] * np.clip(1 - P["debt_rec"] * debt, 0.2, 1.0) * (P["breaks_gain"] if fl["breaks"] else 1.0)
+            fat = np.clip(fat + P["rho_fat"] * q * (1 - fat) - om * fat, 0, 0.95)
+            q = np.clip(q * (1 - fat) / (1 - f_ref), 0, 1.0)
+            debt_sum += debt; fat_sum += fat; short_months += S_t < 7.0
         # --- edge and leverage
         v_eff = tr["v"] * (np.clip(1 - P["a_v"] * m ** 2, 0.3, 1.0) if use_mood else 1.0)
+        if use_sleep:
+            v_eff = v_eff * np.clip(1 - P["debt_v"] * debt, 0.5, 1.0)
         mu = P["mu_max"] * q * v_eff
         c_dec = c * (np.exp(P["a_c"] * m) if (use_mood and not fl["precommit"]) else 1.0)
         f = P["kelly_frac"] * c_dec * mu / P["sigma"] ** 2
@@ -163,6 +200,10 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         z = rng.standard_normal(N)
         X = P["r"] + mu + P["sigma"] * z
         invest = K * (P["r"] + f * (X - P["r"]))
+        if P["ret_prem"] > 0:        # returns rise with wealth (Fagereng et al. 2020): access, not skill
+            invest = invest + K * P["ret_prem"] * np.clip(np.log1p(np.maximum(K, 0) / 10) / np.log(101), 0, 1)
+        if P["cap_tax"] > 0:          # tax on positive capital income
+            invest = np.where(invest > 0, invest * (1 - P["cap_tax"]), invest)
         net_income = income + (P["y_R"] * R / (R + P["R_half"]) / 12.0 if fl["merit"] else 0.0)
         cons = P["cons_income"] * income + P["save_wealth_rate"] * np.maximum(K, 0)
         if fl["ratchet"]:
@@ -224,6 +265,8 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
             dep_durs.extend(run[in_dep].tolist())
         mood_out = dict(n_dep=n_dep, months_dep=months_dep, months_elev=months_elev, ever_elev=ever_elev,
                         dep_durs=np.array(dep_durs), imp_hi=imp_hi, imp_lo=imp_lo, m_mean=m_sum / P["T"])
+    if use_sleep:
+        mood_out.update(debt_mean=debt_sum / P["T"], fat_mean=fat_sum / P["T"], short_share=short_months / P["T"])
     return dict(**mood_out, K=K, peak=peak, alive=alive, jailed_t=jailed_t, n_bankrupt=n_bankrupt,
                 t_first_bankrupt=t_first_bankrupt, ever_great=ever_great, t_great=t_great,
                 rescued=rescued, frauds=frauds, peak_c=peak_c, max_lev=max_lev, c=c, R=R,
