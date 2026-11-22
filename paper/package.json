@@ -1,0 +1,15 @@
+{
+  "name": "ciot-paper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build the CIOT research-proposal chapters as PDF (HTML + KaTeX + Chromium)",
+  "scripts": {
+    "figures": "python3 analysis.py",
+    "build": "node build.js"
+  },
+  "dependencies": {
+    "@fontsource/noto-serif-thai": "5.0.13",
+    "@fontsource/sarabun": "5.0.19",
+    "katex": "0.16.11"
+  }
+}
