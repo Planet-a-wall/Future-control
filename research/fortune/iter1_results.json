@@ -1,0 +1,152 @@
+{
+ "M1 static mind": {
+  "metrics": {
+   "mobility_Q1_to_Q5": 0.109,
+   "rank_rank_slope": 0.4376831436487079,
+   "pareto_alpha": 0.6944882187802413,
+   "share_ever_great": 0.1357,
+   "great_then_fell": 0.001105379513633014,
+   "great_jailed": 0.0,
+   "fallers_higher_conf": NaN,
+   "extrinsic_drive_drop": 0.0,
+   "intrinsic_drive_drop": 0.0,
+   "bankrupt_any": 0.0,
+   "jailed_any": 0.0,
+   "heirs_lost_half": 0.07,
+   "heirs_bankrupt": 0.0,
+   "heirs_jailed": 0.0,
+   "heirs_median_final": 6470.165701867468
+  },
+  "pass_": {
+   "mobility_Q1_to_Q5": true,
+   "rank_rank_slope": true,
+   "pareto_alpha": false,
+   "heirs_lost_half": false,
+   "great_then_fell": false,
+   "fallers_higher_conf": false,
+   "extrinsic_drive_drop": false,
+   "intrinsic_drive_drop": true
+  },
+  "n_pass": 3
+ },
+ "M2 +habits,+goal-drive": {
+  "metrics": {
+   "mobility_Q1_to_Q5": 0.14525,
+   "rank_rank_slope": 0.2330852792017133,
+   "pareto_alpha": 1.1143417829391633,
+   "share_ever_great": 0.0637,
+   "great_then_fell": 0.05259026687598116,
+   "great_jailed": 0.0,
+   "fallers_higher_conf": 0.12235230782913264,
+   "extrinsic_drive_drop": 0.06306927015533996,
+   "intrinsic_drive_drop": 0.02026459833998196,
+   "bankrupt_any": 0.02905,
+   "jailed_any": 0.0,
+   "heirs_lost_half": 0.792,
+   "heirs_bankrupt": 0.21633333333333332,
+   "heirs_jailed": 0.0,
+   "heirs_median_final": 1031.6593220020814
+  },
+  "pass_": {
+   "mobility_Q1_to_Q5": true,
+   "rank_rank_slope": true,
+   "pareto_alpha": false,
+   "heirs_lost_half": true,
+   "great_then_fell": true,
+   "fallers_higher_conf": true,
+   "extrinsic_drive_drop": false,
+   "intrinsic_drive_drop": true
+  },
+  "n_pass": 6
+ },
+ "M3 +hubris": {
+  "metrics": {
+   "mobility_Q1_to_Q5": 0.18025,
+   "rank_rank_slope": -0.047575709815939476,
+   "pareto_alpha": 0.9860287986011272,
+   "share_ever_great": 0.1809,
+   "great_then_fell": 0.6766169154228856,
+   "great_jailed": 0.0,
+   "fallers_higher_conf": -0.6980984658166021,
+   "extrinsic_drive_drop": 0.06056090918773991,
+   "intrinsic_drive_drop": -0.010984386791856609,
+   "bankrupt_any": 0.40725,
+   "jailed_any": 0.0,
+   "heirs_lost_half": 0.953,
+   "heirs_bankrupt": 0.8553333333333333,
+   "heirs_jailed": 0.0,
+   "heirs_median_final": 2.88467750275675
+  },
+  "pass_": {
+   "mobility_Q1_to_Q5": false,
+   "rank_rank_slope": false,
+   "pareto_alpha": false,
+   "heirs_lost_half": false,
+   "great_then_fell": false,
+   "fallers_higher_conf": false,
+   "extrinsic_drive_drop": false,
+   "intrinsic_drive_drop": true
+  },
+  "n_pass": 1
+ },
+ "M4 +loss-risk,+fraud": {
+  "metrics": {
+   "mobility_Q1_to_Q5": 0.20525,
+   "rank_rank_slope": -0.10394447195136125,
+   "pareto_alpha": 1.4206244903796046,
+   "share_ever_great": 0.18575,
+   "great_then_fell": 0.776043068640646,
+   "great_jailed": 0.19784656796769853,
+   "fallers_higher_conf": -0.47250960932439945,
+   "extrinsic_drive_drop": 0.04485285485274392,
+   "intrinsic_drive_drop": -0.014002346749438606,
+   "bankrupt_any": 0.4245,
+   "jailed_any": 0.22785,
+   "heirs_lost_half": 0.958,
+   "heirs_bankrupt": 0.6876666666666666,
+   "heirs_jailed": 0.334,
+   "heirs_median_final": 1.6106815560679608
+  },
+  "pass_": {
+   "mobility_Q1_to_Q5": false,
+   "rank_rank_slope": false,
+   "pareto_alpha": true,
+   "heirs_lost_half": false,
+   "great_then_fell": false,
+   "fallers_higher_conf": false,
+   "extrinsic_drive_drop": false,
+   "intrinsic_drive_drop": true
+  },
+  "n_pass": 2
+ },
+ "M5 +merit": {
+  "metrics": {
+   "mobility_Q1_to_Q5": 0.20225,
+   "rank_rank_slope": -0.13783290856308245,
+   "pareto_alpha": 1.0312738339940033,
+   "share_ever_great": 0.17005,
+   "great_then_fell": 0.840635107321376,
+   "great_jailed": 0.19553072625698323,
+   "fallers_higher_conf": -0.14921772276434986,
+   "extrinsic_drive_drop": 0.02581988691690444,
+   "intrinsic_drive_drop": -0.0185997658277202,
+   "bankrupt_any": 0.5375,
+   "jailed_any": 0.18845,
+   "heirs_lost_half": 0.9996666666666667,
+   "heirs_bankrupt": 0.921,
+   "heirs_jailed": 0.22266666666666668,
+   "heirs_median_final": 0.797517120367624
+  },
+  "pass_": {
+   "mobility_Q1_to_Q5": false,
+   "rank_rank_slope": false,
+   "pareto_alpha": false,
+   "heirs_lost_half": false,
+   "great_then_fell": false,
+   "fallers_higher_conf": false,
+   "extrinsic_drive_drop": false,
+   "intrinsic_drive_drop": true
+  },
+  "n_pass": 1
+ }
+}

@@ -1,0 +1,480 @@
+[
+ {
+  "param": "r",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1524797162860332,
+   "heirs_bankrupt": 0.10433333333333333
+  }
+ },
+ {
+  "param": "r",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1172364500510348,
+   "heirs_lost_half": 0.15283333333333332
+  }
+ },
+ {
+  "param": "sigma",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 0.7719568978520127,
+   "heirs_bankrupt": 0.1355
+  }
+ },
+ {
+  "param": "sigma",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "heirs_lost_half": 0.16666666666666666
+  }
+ },
+ {
+  "param": "mu_max",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "heirs_lost_half": 0.15583333333333332
+  }
+ },
+ {
+  "param": "mu_max",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 0.8568223591058489,
+   "heirs_bankrupt": 0.12516666666666668
+  }
+ },
+ {
+  "param": "kelly_frac",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "heirs_lost_half": 0.13683333333333333
+  }
+ },
+ {
+  "param": "kelly_frac",
+  "scale": 1.2,
+  "n": 7,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt",
+   "jailed_any"
+  ],
+  "vals": {
+   "pareto_alpha": 1.0744868734988695,
+   "heirs_bankrupt": 0.13916666666666666,
+   "jailed_any": 0.020475
+  }
+ },
+ {
+  "param": "f_cap",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.0941941870245413
+  }
+ },
+ {
+  "param": "f_cap",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.121988892683879
+  }
+ },
+ {
+  "param": "save_wealth_rate",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.0786830719622382,
+   "heirs_lost_half": 0.13766666666666666
+  }
+ },
+ {
+  "param": "save_wealth_rate",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "heirs_bankrupt": 0.125
+  }
+ },
+ {
+  "param": "cons_income",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.0570766714947288
+  }
+ },
+ {
+  "param": "cons_income",
+  "scale": 1.2,
+  "n": 6,
+  "fails": [
+   "mobility_Q1_to_Q5",
+   "rank_rank_slope",
+   "bankrupt_any",
+   "extr_minus_intr_drop"
+  ],
+  "vals": {
+   "mobility_Q1_to_Q5": 0.014,
+   "rank_rank_slope": 0.5731393825073368,
+   "bankrupt_any": 0.544775,
+   "extr_minus_intr_drop": 0.029631110459679817
+  }
+ },
+ {
+  "param": "habit_decay",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1477185254244928,
+   "heirs_bankrupt": 0.10533333333333333
+  }
+ },
+ {
+  "param": "habit_decay",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.116783593356201
+  }
+ },
+ {
+  "param": "beta",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "heirs_lost_half": 0.14633333333333334
+  }
+ },
+ {
+  "param": "beta",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.0796626953507176,
+   "heirs_bankrupt": 0.13183333333333333
+  }
+ },
+ {
+  "param": "beta_neg",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.127713601666086
+  }
+ },
+ {
+  "param": "beta_neg",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1753061124898985,
+   "heirs_lost_half": 0.19366666666666665
+  }
+ },
+ {
+  "param": "gamma",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1150967694374232,
+   "heirs_bankrupt": 0.12066666666666667
+  }
+ },
+ {
+  "param": "gamma",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1670966055041716,
+   "heirs_lost_half": 0.17733333333333334
+  }
+ },
+ {
+  "param": "psi",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1472828171855416,
+   "heirs_lost_half": 0.1805
+  }
+ },
+ {
+  "param": "psi",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1136001476178432,
+   "heirs_bankrupt": 0.11316666666666667
+  }
+ },
+ {
+  "param": "ego_gain",
+  "scale": 0.8,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_lost_half"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1678087878079075,
+   "heirs_lost_half": 0.18333333333333332
+  }
+ },
+ {
+  "param": "ego_gain",
+  "scale": 1.2,
+  "n": 8,
+  "fails": [
+   "pareto_alpha",
+   "heirs_bankrupt"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1158608564638477,
+   "heirs_bankrupt": 0.11133333333333334
+  }
+ },
+ {
+  "param": "goal_med",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.131389340413976
+  }
+ },
+ {
+  "param": "goal_med",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.131389340413976
+  }
+ },
+ {
+  "param": "lam_loss",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1439909088415827
+  }
+ },
+ {
+  "param": "lam_loss",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.13541662155152
+  }
+ },
+ {
+  "param": "fraud_pi",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1335656664420328
+  }
+ },
+ {
+  "param": "fraud_pi",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1334611386358857
+  }
+ },
+ {
+  "param": "fraud_det",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.131389340413976
+  }
+ },
+ {
+  "param": "fraud_det",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.131389340413976
+  }
+ },
+ {
+  "param": "y_R",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1552668271147304
+  }
+ },
+ {
+  "param": "y_R",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1276730307018705
+  }
+ },
+ {
+  "param": "rho_R",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1302432720390687
+  }
+ },
+ {
+  "param": "rho_R",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1347823610941863
+  }
+ },
+ {
+  "param": "rescue_p",
+  "scale": 0.8,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1312442798146438
+  }
+ },
+ {
+  "param": "rescue_p",
+  "scale": 1.2,
+  "n": 9,
+  "fails": [
+   "pareto_alpha"
+  ],
+  "vals": {
+   "pareto_alpha": 1.1316948631612262
+  }
+ }
+]

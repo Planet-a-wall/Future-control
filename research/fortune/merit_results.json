@@ -1,0 +1,70 @@
+{
+ "merit = money + rescue only": [
+  {
+   "omega": 0.0,
+   "p_great": 0.6011,
+   "p_fall_given_great": 0.37547828980202963,
+   "p_stay": 0.3754,
+   "p_jail": 0.0332,
+   "median_final": 34.85527126800882
+  },
+  {
+   "omega": 0.05,
+   "p_great": 0.55055,
+   "p_fall_given_great": 0.36663336663336665,
+   "p_stay": 0.3487,
+   "p_jail": 0.0323,
+   "median_final": 29.73302235025596
+  },
+  {
+   "omega": 0.1,
+   "p_great": 0.4788,
+   "p_fall_given_great": 0.3529657477025898,
+   "p_stay": 0.3098,
+   "p_jail": 0.0306,
+   "median_final": 22.759000835072765
+  },
+  {
+   "omega": 0.2,
+   "p_great": 0.25245,
+   "p_fall_given_great": 0.10615963557140028,
+   "p_stay": 0.22565,
+   "p_jail": 0.01895,
+   "median_final": 3.5940126149418123
+  }
+ ],
+ "merit + honest feedback": [
+  {
+   "omega": 0.0,
+   "p_great": 0.6011,
+   "p_fall_given_great": 0.37547828980202963,
+   "p_stay": 0.3754,
+   "p_jail": 0.0332,
+   "median_final": 34.85527126800882
+  },
+  {
+   "omega": 0.05,
+   "p_great": 0.5432,
+   "p_fall_given_great": 0.22303019145802652,
+   "p_stay": 0.42205,
+   "p_jail": 0.0298,
+   "median_final": 45.33996687465369
+  },
+  {
+   "omega": 0.1,
+   "p_great": 0.4605,
+   "p_fall_given_great": 0.1748099891422367,
+   "p_stay": 0.38,
+   "p_jail": 0.0262,
+   "median_final": 39.3167399014565
+  },
+  {
+   "omega": 0.2,
+   "p_great": 0.21475,
+   "p_fall_given_great": 0.05587892898719441,
+   "p_stay": 0.20275,
+   "p_jail": 0.0147,
+   "median_final": 8.066135970655854
+  }
+ ]
+}
