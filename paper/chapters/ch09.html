@@ -1,0 +1,167 @@
+<!--meta {"num":9,"label":"บทที่ 9 · บทเสริม ข","slug":"supp_B_profiles_routines","title":"โปรไฟล์บุคคล กิจวัตร และสภาวะที่เหมาะสม: การเปรียบเทียบด้วยแบบจำลอง","en":"Supplement B — Person Profiles, Routines and Optimal States"}-->
+
+<div class="summary">
+  <div class="hd">สรุปนำบท</div>
+  <div class="row"><div class="k">แนวคิดของบท</div><div class="v">
+    <p>บทนี้นำแผนที่ในบทเสริม ก มาสร้าง <b>โปรไฟล์บุคคล 7 แบบ</b> ได้แก่ คนทั่วไป คนที่สิ่งเร้ารบกวนน้อย คนที่โฟกัสสูง คนที่สงบ (ฝึกสมาธิ) คนที่พักผ่อนน้อย คนที่ยุ่งและสลับงานบ่อย และคนที่คิดบวกอย่างเดียวโดยไม่วางแผน แต่ละโปรไฟล์คือเวกเตอร์ของพารามิเตอร์ $(q, p, a, b, \lambda, \sigma, \nu, \lambda_f, s)$ จากนั้นเปรียบเทียบผลเมื่อมีและไม่มี <b>กิจวัตร</b> (แผน if–then ที่ผูกกับสิ่งกระตุ้นคงที่ การทบทวนเป้าหมายทุกวัน และช่วงเวลานอนที่ปกป้องไว้) ด้วยแบบจำลองรวม (7.1) ทฤษฎีบท 5.3 และทฤษฎีบท 6.3</p></div></div>
+  <div class="row"><div class="k">ผลทดสอบที่ควรได้</div><div class="v">
+    <ul><li>โปรไฟล์ที่ระยะห่าง $q - C^\ast$ เป็นบวกต้องมีโอกาสคงอยู่สูง และโปรไฟล์ที่ติดลบต้องมีโอกาสต่ำ ซึ่งสอดคล้องกับทฤษฎีบท 4.2</li>
+    <li>กิจวัตรต้องลด $C^\ast$ (ผ่าน $b\uparrow$ และ $\lambda\downarrow$) และเพิ่มโอกาสที่เจตนารอด (ผ่าน $T_r\downarrow$) โดยไม่เปลี่ยนประสิทธิภาพต่อขั้น $\eta$ เพราะ $\eta$ ขึ้นกับ $q p$ เท่านั้น</li>
+    <li>ต้องระบุได้ว่าโปรไฟล์ใด <b>กิจวัตรอย่างเดียวไม่พอ</b> และต้องแก้ปัจจัยใดเพิ่มเติม</li></ul></div></div>
+  <div class="row"><div class="k">ข้อเสนอแนะ</div><div class="v">
+    <p>สภาวะที่เหมาะสมไม่ใช่สภาวะเดียวตลอดวัน แต่คือ <b>วงจร</b> ของสภาวะที่แต่ละช่วงปรับพารามิเตอร์ต่างตัวกัน (รูปที่ 9.3) ลำดับความสำคัญที่ได้จากแบบจำลองคือ (1) นอนให้พอ (2) เปลี่ยนความคิดเป็นแผน if–then (3) ลดการสลับงาน และ (4) ทบทวนทุกวัน ค่าตัวเลขเป็นตัวอย่างประกอบที่ต้องประมาณจากข้อมูลจริงในการศึกษา C</p></div></div>
+</div>
+
+<h2>9.1 แนวคิด: โปรไฟล์คือจุดในปริภูมิพารามิเตอร์</h2>
+<p>แทนที่จะถามว่า "คนแบบไหนประสบความสำเร็จ" บทนี้ถามว่า <b>สภาวะของคนแต่ละแบบย้ายเขาไปอยู่ตรงไหนเทียบกับเส้นวิกฤต</b> ทฤษฎีบท 4.2 บอกว่าสิ่งที่ตัดสินผลระยะยาวคือระยะห่าง $q - C^\ast(a,b,\lambda)$ ดังนั้นสภาวะทางจิตส่งผลได้สองทาง คือ (i) เปลี่ยนความต่อเนื่อง $q$ ที่คนนั้นทำได้จริง และ (ii) <b>เลื่อนเส้นวิกฤตเอง</b> ผ่าน $a$, $b$, $\lambda$ ทางที่สองมักถูกมองข้าม แต่ตามผลด้านล่างมีขนาดใหญ่พอ ๆ กับทางแรก</p>
+
+<h2>9.2 การเปรียบเทียบเชิงคุณภาพของโปรไฟล์</h2>
+<table>
+<caption>ตารางที่ 9.1 โปรไฟล์ สภาวะสมองที่คาดจากหลักฐาน (บทที่ 8) และผลต่อพารามิเตอร์</caption>
+<tr><th>โปรไฟล์</th><th>สภาวะสมองและคลื่นที่คาด</th><th>พารามิเตอร์</th><th>จุดแข็ง</th><th>ความเสี่ยง</th></tr>
+<tr><td><b>P1</b> สิ่งเร้ารบกวนน้อย</td><td>alpha กั้นสิ่งรบกวนได้มีประสิทธิภาพ; กรองสิ่งที่ไม่เกี่ยวข้องออกจากความจำใช้งานได้ดี [1]; สหสัมพันธ์ผกผันระหว่าง DMN กับเครือข่ายงานแรง</td><td>$q\uparrow$ $\sigma\downarrow$ $s\downarrow$</td><td>ความต่อเนื่องสูงโดยไม่ต้องใช้แรงมาก</td><td>อาจสำรวจโอกาสใหม่น้อยลง (การแลกเปลี่ยนระหว่าง exploit กับ explore ของ LC–NE [2])</td></tr>
+<tr><td><b>P2</b> โฟกัสสูง (deep work)</td><td>theta ที่หน้าผากส่วนกลางเพิ่มขึ้น; alpha ลดลงในบริเวณที่ทำงาน; LC แบบ phasic; DMN ลดลง</td><td>$q\uparrow$ $p\uparrow$ $a\uparrow$</td><td>ประสิทธิภาพต่อขั้นสูงสุด</td><td>ความล้าสะสม [3] (ข้อเสนอ 8.2); ถ้าไม่พักจะเลื่อนไปเป็น P4</td></tr>
+<tr><td><b>P3</b> สงบ (ฝึกสมาธิ)</td><td>alpha และ theta เพิ่มขึ้นระหว่างฝึก [4]; beta ลดลง; HRV สูงขึ้น; กิจกรรม DMN ลดลง [5]</td><td>$\sigma\downarrow$ $s\downarrow$ $\lambda\downarrow$ $q\uparrow$ เล็กน้อย</td><td>เจตนาอยู่รอดได้ดีที่สุดเมื่อไม่มีกิจวัตร</td><td>ความตื่นตัวอาจต่ำเกินไปสำหรับงานที่ต้องเร่ง; ความสงบอย่างเดียวไม่ได้สร้างการกระทำ</td></tr>
+<tr><td><b>P4</b> พักผ่อนน้อย</td><td>theta ขณะตื่นเพิ่มขึ้น (ความง่วง) [6]; การหลับเฉพาะที่; การหลุดความสนใจ; อะมิกดาลาตอบสนองเพิ่ม 60% [7]</td><td>$q\downarrow p\downarrow a\downarrow$ / $\lambda\uparrow\sigma\uparrow s\uparrow$</td><td>—</td><td>ประเมินตัวเองต่ำกว่าความเป็นจริง เพราะความง่วงที่รู้สึกคงที่ ขณะที่ประสิทธิภาพลดลงเรื่อย ๆ [8]</td></tr>
+<tr><td><b>P5</b> ยุ่ง / สลับงานบ่อย</td><td>beta และความตื่นตัวสูง; LC แบบ tonic สูง; ต้นทุนการสลับงาน [9]; ความสนใจตกค้างจากงานก่อน [10]</td><td>$q\downarrow p\downarrow$ / $\lambda\uparrow\sigma\uparrow$</td><td>ตอบสนองเร็ว</td><td>ความเครียดลดการควบคุมความสนใจของสมองส่วนหน้า (ฟื้นกลับได้) [11]</td></tr>
+<tr><td><b>P6</b> คิดบวกอย่างเดียว</td><td>คิดถึงเป้าหมายบ่อย แต่การตื่นตัวพร้อมลงมือลดลง [12]</td><td>$a\downarrow$ $p\downarrow$</td><td>รู้สึกดีในขณะนั้น</td><td>ผลสัมฤทธิ์ต่ำกว่าคนที่มองเห็นอุปสรรคตามจริง [13]</td></tr>
+</table>
+<div class="box note"><span class="t">หมายเหตุเรื่อง flow.</span>
+สภาวะ flow (จดจ่อเต็มที่และรู้สึกลื่นไหล) สัมพันธ์กับการทำงานที่ลดลงของ medial prefrontal cortex และอะมิกดาลาในการทดลองหนึ่ง [14] แต่หลักฐานโดยรวมยังไม่สม่ำเสมอ ในแบบจำลองนี้ flow คือกรณีพิเศษของ P2 ที่ความตื่นตัวอยู่ใกล้จุดสูงสุดของเส้นโค้งในรูปที่ 8.1</div>
+
+<h2>9.3 ค่าพารามิเตอร์ที่ใช้จำลอง</h2>
+<table>
+<caption>ตารางที่ 9.2 พารามิเตอร์ของแต่ละโปรไฟล์ (ทิศทางมาจากตารางที่ 8.4 ส่วนขนาดเป็นค่าสมมติ)</caption>
+<tr><th>โปรไฟล์</th><th class="n">$q$</th><th class="n">$p$</th><th class="n">$a$</th><th class="n">$b$</th><th class="n">$\lambda$</th><th class="n">$\sigma$</th><th class="n">$\nu$</th><th class="n">$1/\lambda_f$ (วัน)</th><th class="n">$s$</th></tr>
+<tr><td>P0 ทั่วไป</td><td class="n">0.45</td><td class="n">0.80</td><td class="n">0.090</td><td class="n">0.20</td><td class="n">0.100</td><td class="n">1.00</td><td class="n">0.030</td><td class="n">7</td><td class="n">0.35</td></tr>
+<tr><td>P1 สิ่งเร้ารบกวนน้อย</td><td class="n">0.55</td><td class="n">0.80</td><td class="n">0.090</td><td class="n">0.20</td><td class="n">0.100</td><td class="n">0.85</td><td class="n">0.030</td><td class="n">7</td><td class="n">0.30</td></tr>
+<tr><td>P2 โฟกัสสูง</td><td class="n">0.65</td><td class="n">0.90</td><td class="n">0.100</td><td class="n">0.20</td><td class="n">0.100</td><td class="n">0.90</td><td class="n">0.030</td><td class="n">7</td><td class="n">0.35</td></tr>
+<tr><td>P3 สงบ</td><td class="n">0.55</td><td class="n">0.85</td><td class="n">0.090</td><td class="n">0.20</td><td class="n">0.095</td><td class="n">0.80</td><td class="n">0.025</td><td class="n">7</td><td class="n">0.25</td></tr>
+<tr><td>P4 พักผ่อนน้อย</td><td class="n">0.38</td><td class="n">0.70</td><td class="n">0.075</td><td class="n">0.20</td><td class="n">0.110</td><td class="n">1.20</td><td class="n">0.035</td><td class="n">5</td><td class="n">0.50</td></tr>
+<tr><td>P5 ยุ่ง / สลับงานบ่อย</td><td class="n">0.35</td><td class="n">0.75</td><td class="n">0.085</td><td class="n">0.20</td><td class="n">0.105</td><td class="n">1.15</td><td class="n">0.030</td><td class="n">6</td><td class="n">0.45</td></tr>
+<tr><td>P6 คิดบวกอย่างเดียว</td><td class="n">0.50</td><td class="n">0.70</td><td class="n">0.060</td><td class="n">0.20</td><td class="n">0.100</td><td class="n">1.00</td><td class="n">0.030</td><td class="n">7</td><td class="n">0.35</td></tr>
+</table>
+<div class="box def"><span class="t">นิยาม 9.1 (กิจวัตร).</span>
+กิจวัตรคือการเปลี่ยนพารามิเตอร์สามตัว: $b \mapsto 1.2\,b$ (แผน if–then ผูกการกระทำกับสิ่งกระตุ้นคงที่ [15]), $\lambda\mapsto 0.9\,\lambda$ และ $s \mapsto 0.85\,s$ (เวลาและสถานที่คงที่ ทำให้การลืมสม่ำเสมอขึ้น) พร้อมกับเปลี่ยนช่วงทบทวนจาก $T_r = 4$ วันเป็น $T_r = 1$ วัน ส่วน $q$ และ $p$ ไม่เปลี่ยน</div>
+<p>เงื่อนไขการจำลองเหมือนบทที่ 7: ฝึก 120 วัน แล้วหยุด 180 วัน (2,000 เส้นทางต่อสถานการณ์) $\kappa = 1/11$, $\mu = 1/30$, $K=1$, $n=4$, $\theta = 0.3$, ขอบฟ้าของการทบทวน 180 วัน และ $N=16$ สำหรับ $\eta$</p>
+
+<h2>9.4 ผลการทดสอบ</h2>
+<table>
+<caption>ตารางที่ 9.3 ผลของแต่ละโปรไฟล์ เมื่อไม่มีกิจวัตร (–) และมีกิจวัตร (R)</caption>
+<tr><th>โปรไฟล์</th><th></th><th class="n">$C^\ast$</th><th class="n">$q - C^\ast$</th><th class="n">P(คงอยู่)</th><th class="n">$\E x(300)/g$</th><th class="n">$\eta$</th><th class="n">P(เจตนารอด 180 วัน)</th></tr>
+<tr><td rowspan="2">P0 ทั่วไป</td><td>–</td><td class="n">0.426</td><td class="n">+0.024</td><td class="n">0.673</td><td class="n">0.608</td><td class="n">0.266</td><td class="n">0.470</td></tr>
+<tr class="ok"><td>R</td><td class="n">0.346</td><td class="n">+0.104</td><td class="n">0.999</td><td class="n">0.874</td><td class="n">0.266</td><td class="n">1.000</td></tr>
+<tr><td rowspan="2">P1 สิ่งเร้ารบกวนน้อย</td><td>–</td><td class="n">0.426</td><td class="n">+0.124</td><td class="n">0.999</td><td class="n">0.834</td><td class="n">0.370</td><td class="n">0.746</td></tr>
+<tr class="ok"><td>R</td><td class="n">0.346</td><td class="n">+0.204</td><td class="n">1.000</td><td class="n">0.880</td><td class="n">0.370</td><td class="n">1.000</td></tr>
+<tr><td rowspan="2">P2 โฟกัสสูง</td><td>–</td><td class="n">0.384</td><td class="n">+0.266</td><td class="n">1.000</td><td class="n">0.833</td><td class="n">0.476</td><td class="n">0.470</td></tr>
+<tr class="ok"><td>R</td><td class="n">0.311</td><td class="n">+0.339</td><td class="n">1.000</td><td class="n">0.879</td><td class="n">0.476</td><td class="n">1.000</td></tr>
+<tr><td rowspan="2">P3 สงบ</td><td>–</td><td class="n">0.398</td><td class="n">+0.152</td><td class="n">1.000</td><td class="n">0.838</td><td class="n">0.366</td><td class="n">0.937</td></tr>
+<tr class="ok"><td>R</td><td class="n">0.323</td><td class="n">+0.227</td><td class="n">1.000</td><td class="n">0.883</td><td class="n">0.366</td><td class="n">1.000</td></tr>
+<tr class="bad"><td rowspan="2">P4 พักผ่อนน้อย</td><td>–</td><td class="n">0.583</td><td class="n">−0.203</td><td class="n">0.000</td><td class="n">0.132</td><td class="n">0.204</td><td class="n">0.000</td></tr>
+<tr class="bad"><td>R</td><td class="n">0.472</td><td class="n">−0.092</td><td class="n">0.056</td><td class="n">0.173</td><td class="n">0.204</td><td class="n">0.998</td></tr>
+<tr class="bad"><td rowspan="2">P5 ยุ่ง / สลับงานบ่อย</td><td>–</td><td class="n">0.483</td><td class="n">−0.133</td><td class="n">0.000</td><td class="n">0.128</td><td class="n">0.177</td><td class="n">0.011</td></tr>
+<tr class="bad"><td>R</td><td class="n">0.391</td><td class="n">−0.041</td><td class="n">0.141</td><td class="n">0.231</td><td class="n">0.177</td><td class="n">1.000</td></tr>
+<tr class="bad"><td rowspan="2">P6 คิดบวกอย่างเดียว</td><td>–</td><td class="n">0.640</td><td class="n">−0.140</td><td class="n">0.004</td><td class="n">0.120</td><td class="n">0.320</td><td class="n">0.470</td></tr>
+<tr class="bad"><td>R</td><td class="n">0.519</td><td class="n">−0.019</td><td class="n">0.362</td><td class="n">0.404</td><td class="n">0.320</td><td class="n">1.000</td></tr>
+</table>
+<fig src="f9_1_profiles" cap="เปรียบเทียบโปรไฟล์เมื่อไม่มีกิจวัตร (จุดเทา) และมีกิจวัตร (จุดเขียว): ซ้าย โอกาสที่โครงสร้างคงอยู่หลังหยุด; กลาง สัดส่วนของเป้าหมายที่เหลือในวันที่ 300; ขวา โอกาสที่เจตนารอด 180 วัน (ทบทวนทุก 4 วันเทียบกับทุกวัน)"/>
+<fig src="f9_2_trajectories" cap="วิถีเฉลี่ยของผลลัพธ์สำหรับ 5 โปรไฟล์: เส้นประคือไม่มีกิจวัตร เส้นทึบคือมีกิจวัตร แถบสีฟ้าคือช่วงฝึก 120 วัน กิจวัตรพาโปรไฟล์ทั่วไป (P0) ข้ามเส้นวิกฤตได้ แต่ไม่พอสำหรับคนที่พักผ่อนน้อย (P4) หรือยุ่ง (P5)"/>
+
+<h3>9.4.1 การแทรกแซงขั้นที่สอง</h3>
+<p>สำหรับสามโปรไฟล์ที่กิจวัตรอย่างเดียวไม่พาข้ามเส้นวิกฤต ได้ทดลองเพิ่มการแก้ปัจจัยต้นเหตุ ทุกกรณีมีกิจวัตรด้วย</p>
+<table>
+<caption>ตารางที่ 9.4 ผลของการแทรกแซงขั้นที่สอง</caption>
+<tr><th>สถานการณ์</th><th>สิ่งที่เปลี่ยน</th><th class="n">$C^\ast$</th><th class="n">$q - C^\ast$</th><th class="n">P(คงอยู่)</th><th class="n">$\E x(300)/g$</th></tr>
+<tr><td>P4+ พักผ่อนน้อย → นอนดีขึ้นบางส่วน</td><td>$q$ 0.38→0.42, $a$ 0.075→0.083, $\lambda$ 0.11→0.105, $s$ 0.50→0.42 เป็นต้น</td><td class="n">0.401</td><td class="n">+0.019</td><td class="n">0.706</td><td class="n">0.656</td></tr>
+<tr class="ok"><td>P5+ ยุ่ง → จัดบล็อกเวลา</td><td>$q$ 0.35→0.45 (ลดการสลับงาน) พารามิเตอร์อื่นเหมือนเดิม</td><td class="n">0.391</td><td class="n">+0.059</td><td class="n">0.932</td><td class="n">0.815</td></tr>
+<tr class="ok"><td>P6+ คิดบวกอย่างเดียว → MCII</td><td>$a$ 0.06→0.085, $p$ 0.70→0.80 (มองเห็นอุปสรรคตามจริงแล้ววางแผน)</td><td class="n">0.366</td><td class="n">+0.134</td><td class="n">1.000</td><td class="n">0.878</td></tr>
+</table>
+
+<div class="box res"><span class="t">ข้อค้นพบ.</span>
+<ol>
+<li><b>คนทั่วไปอยู่ใกล้เส้นวิกฤตมาก</b> (ห่าง +0.024) โอกาสคงอยู่จึงเป็นเพียง 0.67 กิจวัตรลด $C^\ast$ ลง 19% (0.426 → 0.346) โอกาสคงอยู่จึงเพิ่มเป็น 0.999 โดยไม่ต้องเพิ่มความพยายามในการจดจ่อเลย</li>
+<li><b>สิ่งเร้ารบกวนน้อย โฟกัส และสงบ ข้ามเส้นวิกฤตได้แม้ไม่มีกิจวัตร</b> แต่มีจุดอ่อนต่างกัน คนโฟกัสมีประสิทธิภาพต่อขั้นสูงสุด ($\eta = 0.476$) แต่เจตนามีโอกาสรอดเพียง 0.47 เท่ากับคนทั่วไป ถ้าไม่ทบทวน ขณะที่คนที่สงบมีโอกาสรอดสูงสุด (0.937) เพราะการลืมสม่ำเสมอ ($s$ ต่ำ) แปลว่า <b>โฟกัสโดยไม่ทบทวนยังเสี่ยงที่จะหลุดเป้าหมาย ส่วนความสงบช่วยให้เป้าหมายคงอยู่ในใจ</b></li>
+<li><b>กิจวัตรชดเชยการพักผ่อนน้อยไม่ได้:</b> การนอนน้อยทั้งลด $q$ และดัน $C^\ast$ ขึ้นเป็น 0.583 กิจวัตรช่วยให้เจตนารอด (0.998) แต่โอกาสคงอยู่ของโครงสร้างเพิ่มเป็นเพียง 0.056 ต้องแก้การนอนด้วย (0.706)</li>
+<li><b>สำหรับคนยุ่ง ตัวแปรที่คุ้มที่สุดคือการลดการสลับงาน:</b> กิจวัตรอย่างเดียวได้ 0.141 แต่ถ้าเพิ่มการจัดบล็อกเวลา ($q$ 0.35 → 0.45) จะได้ 0.932</li>
+<li><b>คิดถึงเป้าหมายบ่อยไม่เพียงพอ:</b> P6 มี $q = 0.50$ ซึ่งสูงกว่าคนทั่วไป แต่ $a$ ต่ำทำให้ $C^\ast = 0.640$ จึงแทบไม่มีผลคงอยู่ (0.004) เมื่อเปลี่ยนเป็น MCII ร่วมกับกิจวัตร ผลกลายเป็น 1.000 ข้อนี้ตอบคำถามตั้งต้นของงาน: <b>ความคิดส่งผลต่ออนาคตเมื่อถูกแปลงเป็นแผนและการกระทำ</b> ไม่ใช่เมื่อถูกนึกถึงบ่อย</li>
+<li><b>กิจวัตรไม่เปลี่ยน $\eta$</b> ตามที่ทฤษฎีบท 5.3 ทำนาย เพราะกิจวัตรทำงานผ่าน $b$, $\lambda$ และการทบทวน ไม่ได้ทำงานผ่าน $q p$</li>
+</ol></div>
+
+<h2>9.5 สภาวะที่เหมาะสมขึ้นกับระยะ: วงจรประจำวัน</h2>
+<p>ผลข้างต้นชี้ว่าแต่ละพารามิเตอร์ถูกปรับได้ดีที่สุดในสภาวะที่ต่างกัน ไม่มีสภาวะเดียวที่ทำให้ทุกพารามิเตอร์ดีพร้อมกัน</p>
+<table>
+<caption>ตารางที่ 9.5 ระยะของวัน สภาวะเป้าหมาย และพารามิเตอร์ที่ได้ประโยชน์</caption>
+<tr><th>ระยะ</th><th>สภาวะสมองเป้าหมาย</th><th>พารามิเตอร์</th><th>หลักฐาน</th></tr>
+<tr><td>นอน 7–9 ชั่วโมง</td><td>slow oscillation, spindle, การกำจัดของเสีย</td><td>$a\uparrow$ $\lambda\downarrow$ $\omega\uparrow$</td><td>[16–18]</td></tr>
+<tr><td>ทบทวนเป้าหมายตอนเช้า (5 นาที)</td><td>ดึงเจตนากลับเข้าความจำใช้งาน</td><td>การทบทวน ($T_r=1$)</td><td>ทบ. 6.3</td></tr>
+<tr><td>บล็อกจดจ่อ (25–90 นาที) ในช่วงเวลาที่ดีตามโครโนไทป์</td><td>theta ที่หน้าผากส่วนกลาง, alpha ที่กั้นสิ่งรบกวน, ความตื่นตัวปานกลาง</td><td>$q\uparrow$ $p\uparrow$</td><td>[19–21]</td></tr>
+<tr><td>พักสั้นระหว่างบล็อก</td><td>ลดความล้า</td><td>$\omega\uparrow$</td><td>[22]</td></tr>
+<tr><td>งานเบาหรืองานสังคมในช่วงความตื่นตัวต่ำ</td><td>—</td><td>ไม่ใช้ $q$ ของงานหลัก</td><td>[21]</td></tr>
+<tr><td>ออกกำลังกาย</td><td>อารมณ์และความตื่นตัวดีขึ้น; ผลต่อฮิปโปแคมปัสในระยะยาว</td><td>$a\uparrow$ (ระยะยาว) $\omega\uparrow$</td><td>[23]</td></tr>
+<tr><td>วางแผน if–then ตอนเย็น</td><td>ความตื่นตัวต่ำถึงปานกลาง alpha สูง (เหมาะกับการคิดกว้าง)</td><td>$b\uparrow$</td><td>[15, 24]</td></tr>
+<tr><td>ผ่อนคลายก่อนนอน / ฝึกสมาธิ</td><td>beta ลดลง HRV สูงขึ้น</td><td>$\sigma\downarrow$ $s\downarrow$</td><td>[25, 26]</td></tr>
+</table>
+<fig src="f9_3_daily_cycle" cap="ตัวอย่างวงจรประจำวันสำหรับคนที่มีโครโนไทป์แบบเช้าถึงกลาง ควรเลื่อนเวลาตามโครโนไทป์ของแต่ละคน แต่ละช่วงมุ่งปรับพารามิเตอร์ของ CIOT คนละตัว นี่เป็นตัวอย่างประกอบ ไม่ใช่ตารางที่พิสูจน์แล้วว่าดีที่สุด"/>
+
+<h2>9.6 ข้อเสนอแนะรายโปรไฟล์</h2>
+<table>
+<caption>ตารางที่ 9.6 การแทรกแซงที่ให้ผลสูงสุดตามแบบจำลอง (เรียงตามลำดับความสำคัญ)</caption>
+<tr><th>โปรไฟล์</th><th>ลำดับที่ 1</th><th>ลำดับที่ 2</th><th>สิ่งที่ควรระวัง</th></tr>
+<tr><td>P0 ทั่วไป</td><td>แผน if–then + ทบทวนทุกวัน</td><td>ลดสิ่งรบกวนในช่วงบล็อกจดจ่อ</td><td>อยู่ใกล้เส้นวิกฤต ทำครึ่ง ๆ กลาง ๆ จะสูญเปล่า</td></tr>
+<tr><td>P1 สิ่งเร้ารบกวนน้อย</td><td>ทบทวนทุกวัน</td><td>จัดเวลาสำรวจโอกาสใหม่</td><td>ความต่อเนื่องสูงแต่อาจติดอยู่กับเป้าหมายที่ไม่เหมาะ</td></tr>
+<tr><td>P2 โฟกัสสูง</td><td>ทบทวนทุกวัน</td><td>พักสั้นและนอนพอ เพื่อรักษา $\omega$</td><td>เลื่อนไปเป็น P4 เมื่อทำงานหนักต่อเนื่อง</td></tr>
+<tr><td>P3 สงบ</td><td>แผน if–then (เปลี่ยนความสงบเป็นการกระทำ)</td><td>บล็อกจดจ่อที่ความตื่นตัวสูงขึ้นเล็กน้อย</td><td>ความสงบไม่ใช่ความก้าวหน้าโดยตัวมันเอง</td></tr>
+<tr><td>P4 พักผ่อนน้อย</td><td><b>แก้การนอนก่อน</b> (อย่างน้อย 7 ชั่วโมง)</td><td>กิจวัตร</td><td>ไม่รู้ตัวว่าประสิทธิภาพลดลง</td></tr>
+<tr><td>P5 ยุ่ง</td><td><b>จัดบล็อกเวลา ลดการสลับงาน</b></td><td>กิจวัตร + จัดการความเครียด</td><td>ความยุ่งทำให้ทั้ง $q$ ต่ำและ $C^\ast$ สูง</td></tr>
+<tr><td>P6 คิดบวกอย่างเดียว</td><td><b>MCII</b>: นึกถึงเป้าหมาย → นึกถึงอุปสรรคจริง → แผน if–then</td><td>กิจวัตร</td><td>ความรู้สึกดีจากการจินตนาการอาจแทนที่การลงมือ</td></tr>
+</table>
+
+<h2>9.7 สมมติฐานเพิ่มเติม H8–H13 และเกณฑ์หักล้าง</h2>
+<table>
+<caption>ตารางที่ 9.7 สมมติฐานของบทเสริม (ทดสอบในการศึกษา C ที่เพิ่ม actigraphy, EEG, HRV และ ESM ด้านอารมณ์)</caption>
+<tr><th>รหัส</th><th>สมมติฐาน</th><th>การวัด</th><th>เกณฑ์หักล้าง</th></tr>
+<tr><td>H8</td><td>เวลานอนเฉลี่ยน้อยกว่า 6 ชั่วโมง ทำนาย $\hat\lambda$ ที่สูงขึ้นและโอกาสข้ามเส้นวิกฤตที่ต่ำลง</td><td>actigraphy 12 สัปดาห์</td><td>สหสัมพันธ์ระหว่างเวลานอนกับ $\hat\lambda$ ไม่เป็นลบ</td></tr>
+<tr><td>H9</td><td>theta ที่หน้าผากส่วนกลางขณะทำงานเป้าหมายทำนาย $\hat a$</td><td>EEG ขณะทำงานในห้องปฏิบัติการ</td><td>ช่วงความน่าเชื่อถือ 95% ของความชันครอบคลุมศูนย์</td></tr>
+<tr><td>H10</td><td>ความแปรปรวนของเวลาตอบสนองทำนาย $\hat\sigma$</td><td>งาน sustained attention</td><td>ไม่มีความสัมพันธ์เชิงบวก</td></tr>
+<tr><td>H11</td><td>ความตื่นตัวมีความสัมพันธ์รูป U กลับหัวกับ $q$ ระหว่างวัน</td><td>ESM + ขนาดรูม่านตาหรือ HRV</td><td>สัมประสิทธิ์กำลังสองไม่เป็นลบ</td></tr>
+<tr><td>H12</td><td>แผน if–then ลด $\hat C^\ast$ (ผ่าน $\hat b$)</td><td>RCT ย่อย 2 แขน ภายในการศึกษา C</td><td>$\hat b$ ไม่ต่างระหว่างแขน</td></tr>
+<tr><td>H13</td><td>จินตนาการเชิงบวกอย่างเดียวให้ผลต่ำกว่า MCII</td><td>RCT ย่อย 2 แขน</td><td>ผลต่างของการคงอยู่ &lt; 10 จุดเปอร์เซ็นต์</td></tr>
+</table>
+
+<h2>9.8 ข้อจำกัด</h2>
+<ol>
+<li><b>ค่าพารามิเตอร์เป็นค่าสมมติ:</b> ทิศทางมีหลักฐาน แต่ขนาดยังไม่มี ผลเชิงคุณภาพ (โปรไฟล์ใดอยู่ฝั่งใดของเส้นวิกฤต) ไวต่อขนาดเหล่านี้ เช่น P0 ห่างจากเส้นวิกฤตเพียง 0.024</li>
+<li><b>โปรไฟล์คือแบบแผนอุดมคติ:</b> คนจริงผสมหลายโปรไฟล์และเปลี่ยนไปตามวัน การวิเคราะห์ที่เหมาะสมคือแบบจำลองลำดับชั้นที่พารามิเตอร์แปรผันตามเวลา</li>
+<li><b>ทิศทางของเหตุและผล:</b> หลักฐานจำนวนมากในบทที่ 8 เป็นความสัมพันธ์ ไม่ใช่เหตุและผล ยกเว้นการทดลองเรื่องการนอน แผน if–then และการฝึกสมาธิที่มีการสุ่ม</li>
+<li><b>ไม่ได้รวมความล้าในการจำลอง:</b> ข้อเสนอ 8.2 ยังไม่ได้ใส่ในระบบ (7.1) ซึ่งเป็นงานขั้นต่อไป และน่าจะทำให้ข้อได้เปรียบของ P2 ลดลงเมื่อมองระยะยาว</li>
+</ol>
+
+<h2>เอกสารอ้างอิง</h2>
+<ol class="refs">
+<li>E. K. Vogel, A. W. McCollough, M. G. Machizawa. Neural measures reveal individual differences in controlling access to working memory. <i>Nature</i> 438, 500–503 (2005).</li>
+<li>G. Aston-Jones, J. D. Cohen. An integrative theory of locus coeruleus–norepinephrine function. <i>Annu. Rev. Neurosci.</i> 28, 403–450 (2005).</li>
+<li>A. Wiehler et al. A neuro-metabolic account of why daylong cognitive work alters the control of economic decisions. <i>Curr. Biol.</i> 32, 3564–3575 (2022).</li>
+<li>T. Lomas, I. Ivtzan, C. H. Y. Fu. A systematic review of the neurophysiology of mindfulness on EEG oscillations. <i>Neurosci. Biobehav. Rev.</i> 57, 401–410 (2015).</li>
+<li>J. A. Brewer et al. Meditation experience is associated with differences in default mode network activity and connectivity. <i>PNAS</i> 108, 20254–20259 (2011).</li>
+<li>L. A. Finelli et al. Dual electroencephalogram markers of human sleep homeostasis. <i>Neuroscience</i> 101, 523–529 (2000).</li>
+<li>S.-S. Yoo et al. The human emotional brain without sleep — a prefrontal amygdala disconnect. <i>Curr. Biol.</i> 17, R877–R878 (2007).</li>
+<li>H. P. A. Van Dongen et al. The cumulative cost of additional wakefulness. <i>Sleep</i> 26, 117–126 (2003).</li>
+<li>S. Monsell. Task switching. <i>Trends Cogn. Sci.</i> 7, 134–140 (2003).</li>
+<li>S. Leroy. Why is it so hard to do my work? The challenge of attention residue when switching between work tasks. <i>Organ. Behav. Hum. Decis. Process.</i> 109, 168–181 (2009).</li>
+<li>C. Liston, B. S. McEwen, B. J. Casey. Psychosocial stress reversibly disrupts prefrontal processing and attentional control. <i>PNAS</i> 106, 912–917 (2009).</li>
+<li>H. B. Kappes, G. Oettingen. Positive fantasies about idealized futures sap energy. <i>J. Exp. Soc. Psychol.</i> 47, 719–729 (2011).</li>
+<li>G. Oettingen, D. Mayer. The motivating function of thinking about the future: expectations versus fantasies. <i>J. Pers. Soc. Psychol.</i> 83, 1198–1212 (2002).</li>
+<li>M. Ulrich, J. Keller, K. Hoenig, C. Waller, G. Grön. Neural correlates of experimentally induced flow experiences. <i>NeuroImage</i> 86, 194–202 (2014).</li>
+<li>P. M. Gollwitzer, P. Sheeran. Implementation intentions and goal achievement: A meta-analysis. <i>Adv. Exp. Soc. Psychol.</i> 38, 69–119 (2006).</li>
+<li>S. Diekelmann, J. Born. The memory function of sleep. <i>Nat. Rev. Neurosci.</i> 11, 114–126 (2010).</li>
+<li>L. Xie et al. Sleep drives metabolite clearance from the adult brain. <i>Science</i> 342, 373–377 (2013).</li>
+<li>N. F. Watson et al. Recommended amount of sleep for a healthy adult. <i>Sleep</i> 38, 843–844 (2015).</li>
+<li>J. F. Cavanagh, M. J. Frank. Frontal theta as a mechanism for cognitive control. <i>Trends Cogn. Sci.</i> 18, 414–421 (2014).</li>
+<li>O. Jensen, A. Mazaheri. Shaping functional architecture by oscillatory alpha activity: gating by inhibition. <i>Front. Hum. Neurosci.</i> 4, 186 (2010).</li>
+<li>C. Schmidt, F. Collette, C. Cajochen, P. Peigneux. A time to think: circadian rhythms in human cognition. <i>Cogn. Neuropsychol.</i> 24, 755–789 (2007).</li>
+<li>P. Albulescu et al. "Give me a break!" A systematic review and meta-analysis on the efficacy of micro-breaks. <i>PLoS ONE</i> 17, e0272460 (2022).</li>
+<li>K. I. Erickson et al. Exercise training increases size of hippocampus and improves memory. <i>PNAS</i> 108, 3017–3022 (2011).</li>
+<li>A. Fink, M. Benedek. EEG alpha power and creative ideation. <i>Neurosci. Biobehav. Rev.</i> 44, 111–123 (2014).</li>
+<li>M. Goyal et al. Meditation programs for psychological stress and well-being. <i>JAMA Intern. Med.</i> 174, 357–368 (2014).</li>
+<li>S. Laborde, E. Mosley, J. F. Thayer. Heart rate variability and cardiac vagal tone in psychophysiological research. <i>Front. Psychol.</i> 8, 213 (2017).</li>
+</ol>

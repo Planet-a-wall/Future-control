@@ -106,9 +106,9 @@ async function build(file, browser) {
   src = inlineFigures(src, meta.num);
   src = renderMath(src);
   const html = `<!doctype html><html lang="th"><head><meta charset="utf-8">
-<title>CIOT บทที่ ${meta.num}: ${meta.title}</title>${fontLinks()}<style>${css}</style></head><body>
+<title>CIOT ${meta.label || "บทที่ " + meta.num}: ${meta.title}</title>${fontLinks()}<style>${css}</style></head><body>
 <div class="cover"><div class="series">Cumulative Intentional Order Theory (CIOT) · Research Proposal</div>
-<div class="num">บทที่ ${meta.num}</div><h1>${meta.title}</h1><div class="en">${meta.en}</div>
+<div class="num">${meta.label || "บทที่ " + meta.num}</div><h1>${meta.title}</h1><div class="en">${meta.en}</div>
 <div class="meta">ฉบับร่างเพื่อเสนอการวิจัย · v2.0 · พฤศจิกายน 2569 · ผลเชิงตัวเลขทั้งหมดทำซ้ำได้ด้วย <code>paper/analysis.py</code></div></div>
 ${src}</body></html>`;
   const htmlPath = path.join(TMP, file);
