@@ -30,7 +30,7 @@ function inlineFigures(src, chap) {
   return src.replace(/<fig src="([^"]+)" cap="([^"]*)"(?: w="([^"]+)")?\s*\/>/g, (_, name, cap, w) => {
     k += 1;
     let svg = fs.readFileSync(path.join(ROOT, "figures", name + ".svg"), "utf8");
-    svg = svg.replace(/<\?xml[^>]*>/, "").replace(/<!DOCTYPE[^>]*>/, "")
+    svg = svg.replace(/<\?xml[^>]*>/, "").replace(/<!DOCTYPE[^>]*>/, "").replace(/<!--[\s\S]*?-->/g, "")
       .replace(/<svg([^>]*?)width="[^"]*"([^>]*?)height="[^"]*"/, "<svg$1$2");
     return `<figure style="width:${w || "100%"}">${svg}<figcaption><b>รูปที่ ${chap}.${k}</b> ${cap}</figcaption></figure>`;
   });
