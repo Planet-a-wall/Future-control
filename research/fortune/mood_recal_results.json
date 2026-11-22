@@ -1,0 +1,506 @@
+[
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.3,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.154
+   ],
+   [
+    "heirs_bankrupt",
+    0.108
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.3,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.151
+   ],
+   [
+    "heirs_bankrupt",
+    0.108
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.6,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.156
+   ],
+   [
+    "heirs_bankrupt",
+    0.114
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.6,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.15
+   ],
+   [
+    "heirs_bankrupt",
+    0.114
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 1.0,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.136
+   ],
+   [
+    "heirs_bankrupt",
+    0.127
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 1.0,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.136
+   ],
+   [
+    "heirs_bankrupt",
+    0.128
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.3,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.162
+   ],
+   [
+    "heirs_bankrupt",
+    0.122
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.3,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.144
+   ],
+   [
+    "heirs_bankrupt",
+    0.122
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.6,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.179
+   ],
+   [
+    "heirs_bankrupt",
+    0.134
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.6,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.156
+   ],
+   [
+    "heirs_bankrupt",
+    0.134
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 1.0,
+   "spree": 0.25,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.181
+   ],
+   [
+    "heirs_bankrupt",
+    0.146
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 1.0,
+   "spree": 0.5,
+   "a_f": 0.3
+  },
+  "n": 8,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.154
+   ],
+   [
+    "heirs_bankrupt",
+    0.146
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.3,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.152
+   ],
+   [
+    "heirs_bankrupt",
+    0.108
+   ],
+   [
+    "jailed_any",
+    0.021
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.3,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.156
+   ],
+   [
+    "heirs_bankrupt",
+    0.108
+   ],
+   [
+    "jailed_any",
+    0.02
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.6,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.155
+   ],
+   [
+    "heirs_bankrupt",
+    0.114
+   ],
+   [
+    "jailed_any",
+    0.021
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 0.6,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.148
+   ],
+   [
+    "heirs_bankrupt",
+    0.114
+   ],
+   [
+    "jailed_any",
+    0.021
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 1.0,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.133
+   ],
+   [
+    "heirs_bankrupt",
+    0.127
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.15,
+   "imp_mult": 1.0,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.132
+   ],
+   [
+    "heirs_bankrupt",
+    0.127
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.3,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.159
+   ],
+   [
+    "heirs_bankrupt",
+    0.121
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.3,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.141
+   ],
+   [
+    "heirs_bankrupt",
+    0.121
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.6,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.173
+   ],
+   [
+    "heirs_bankrupt",
+    0.133
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 0.6,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.155
+   ],
+   [
+    "heirs_bankrupt",
+    0.133
+   ],
+   [
+    "jailed_any",
+    0.022
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 1.0,
+   "spree": 0.25,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.181
+   ],
+   [
+    "heirs_bankrupt",
+    0.145
+   ],
+   [
+    "jailed_any",
+    0.023
+   ]
+  ]
+ },
+ {
+  "P": {
+   "a_c": 0.3,
+   "imp_mult": 1.0,
+   "spree": 0.5,
+   "a_f": 1.0
+  },
+  "n": 7,
+  "fails": [
+   [
+    "pareto_alpha",
+    1.154
+   ],
+   [
+    "heirs_bankrupt",
+    0.145
+   ],
+   [
+    "jailed_any",
+    0.023
+   ]
+  ]
+ }
+]

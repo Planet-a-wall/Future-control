@@ -1,0 +1,343 @@
+{
+ "grid": [
+  {
+   "P": {
+    "beta": 0.03,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.004
+   },
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.143
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.035,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.004
+   },
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.149
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.035,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.006
+   },
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.128
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.04,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.004
+   },
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.186
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.03,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.004
+   },
+   "n": 8,
+   "fails": [
+    [
+     "rank_rank_slope",
+     0.501
+    ],
+    [
+     "heirs_lost_half",
+     0.11
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.03,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.006
+   },
+   "n": 8,
+   "fails": [
+    [
+     "rank_rank_slope",
+     0.512
+    ],
+    [
+     "heirs_lost_half",
+     0.088
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.03,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.006
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.193
+    ],
+    [
+     "heirs_lost_half",
+     0.118
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.035,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.004
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.189
+    ],
+    [
+     "heirs_lost_half",
+     0.184
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.035,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.006
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.159
+    ],
+    [
+     "heirs_lost_half",
+     0.159
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.04,
+    "kelly_frac": 0.45,
+    "habit_decay": 0.006
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.182
+    ],
+    [
+     "heirs_lost_half",
+     0.162
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.04,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.004
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.154
+    ],
+    [
+     "heirs_bankrupt",
+     0.108
+    ]
+   ]
+  },
+  {
+   "P": {
+    "beta": 0.04,
+    "kelly_frac": 0.5,
+    "habit_decay": 0.006
+   },
+   "n": 8,
+   "fails": [
+    [
+     "pareto_alpha",
+     1.143
+    ],
+    [
+     "heirs_lost_half",
+     0.195
+    ]
+   ]
+  }
+ ],
+ "chosen": {
+  "habit_decay": 0.004,
+  "mu_max": 0.02,
+  "sigma": 0.1,
+  "beta": 0.03,
+  "dep_th": -2.1,
+  "elev_th": 2.7,
+  "mood_vol": 0.38,
+  "mood_pov": 0.2,
+  "mood_tau": 6.0,
+  "inertia": 2.0,
+  "a_c": 0.15,
+  "imp_mult": 0.3,
+  "spree": 0.25,
+  "a_f": 0.3,
+  "kelly_frac": 0.5
+ },
+ "oos": [
+  {
+   "seed": 101,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.146
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.0745,
+    "rank_rank_slope": 0.4646758532712976,
+    "pareto_alpha": 1.2481328401246592,
+    "share_ever_great": 0.066525,
+    "great_then_fell": 0.12852311161217586,
+    "great_jailed": 0.014280345734686208,
+    "fallers_higher_conf": 0.4416136685732468,
+    "extrinsic_drive_drop": 0.06532927698920496,
+    "intrinsic_drive_drop": 0.01392384858929047,
+    "extr_minus_intr_drop": 0.05140542839991449,
+    "bankrupt_any": 0.072725,
+    "jailed_any": 0.012375,
+    "heirs_lost_half": 0.1465,
+    "heirs_bankrupt": 0.0535,
+    "heirs_jailed": 0.011666666666666667,
+    "heirs_median_final": 5033.486318721464
+   },
+   "mood": {
+    "dep_lifetime": 0.183525,
+    "dep_median_months": 3.0,
+    "elev_lifetime": 0.03995,
+    "dep_OR_poor_vs_rich": 4.006189923399195
+   },
+   "mood_pass": {
+    "dep_lifetime": true,
+    "dep_median_months": true,
+    "elev_lifetime": true,
+    "dep_OR_poor_vs_rich": false
+   }
+  },
+  {
+   "seed": 202,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.148
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.07775,
+    "rank_rank_slope": 0.4736630243577896,
+    "pareto_alpha": 1.3274427766860362,
+    "share_ever_great": 0.0631,
+    "great_then_fell": 0.13629160063391443,
+    "great_jailed": 0.013074484944532488,
+    "fallers_higher_conf": 0.3349999476071712,
+    "extrinsic_drive_drop": 0.0639960416186029,
+    "intrinsic_drive_drop": 0.010829730814761901,
+    "extr_minus_intr_drop": 0.053166310803840995,
+    "bankrupt_any": 0.071075,
+    "jailed_any": 0.0125,
+    "heirs_lost_half": 0.148,
+    "heirs_bankrupt": 0.05466666666666667,
+    "heirs_jailed": 0.01,
+    "heirs_median_final": 5007.981493029514
+   },
+   "mood": {
+    "dep_lifetime": 0.1838,
+    "dep_median_months": 3.0,
+    "elev_lifetime": 0.039575,
+    "dep_OR_poor_vs_rich": 4.2402374604743995
+   },
+   "mood_pass": {
+    "dep_lifetime": true,
+    "dep_median_months": true,
+    "elev_lifetime": true,
+    "dep_OR_poor_vs_rich": false
+   }
+  },
+  {
+   "seed": 303,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.134
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.0765,
+    "rank_rank_slope": 0.47103609484314757,
+    "pareto_alpha": 1.202379625848877,
+    "share_ever_great": 0.06685,
+    "great_then_fell": 0.11593118922961855,
+    "great_jailed": 0.012715033657442034,
+    "fallers_higher_conf": 0.3571868752119798,
+    "extrinsic_drive_drop": 0.06535716903139345,
+    "intrinsic_drive_drop": 0.011596353946610339,
+    "extr_minus_intr_drop": 0.053760815084783115,
+    "bankrupt_any": 0.0726,
+    "jailed_any": 0.012875,
+    "heirs_lost_half": 0.134,
+    "heirs_bankrupt": 0.0445,
+    "heirs_jailed": 0.009166666666666667,
+    "heirs_median_final": 5064.886805814474
+   },
+   "mood": {
+    "dep_lifetime": 0.181625,
+    "dep_median_months": 3.0,
+    "elev_lifetime": 0.039875,
+    "dep_OR_poor_vs_rich": 4.205012147214982
+   },
+   "mood_pass": {
+    "dep_lifetime": true,
+    "dep_median_months": true,
+    "elev_lifetime": true,
+    "dep_OR_poor_vs_rich": false
+   }
+  }
+ ]
+}

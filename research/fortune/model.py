@@ -26,6 +26,7 @@ Feature flags switch mechanisms on/off so each study can add one at a time:
   merit      reputation capital: opportunity premium + rescue near ruin
 """
 import numpy as np
+from scipy.special import erf as _erf
 
 DEFAULT = dict(
     T=480, r=0.0033, sigma=0.10, mu_max=0.03, kelly_frac=0.5, f_cap=2.5,
@@ -35,9 +36,29 @@ DEFAULT = dict(
     lam_loss=1.5, fraud_pi=0.01, fraud_det=0.02,
     y_R=0.15, R_half=5.0, fb_gain=2.0, rho_R=0.01, rescue_p=0.6,
     great=100.0,
+    # --- mood module (multi-timescale mental state)
+    mood_tau=6.0, mood_vol=0.5, mood_eta=0.15, mood_pov=0.10, a_q=0.3, a_c=0.3, a_v=0.1,
+    spree=0.5, a_f=1.0, day_sd=0.6, days=22, theta_hi=2.0, theta_lo=-2.0, imp_act=0.3, imp_mult=1.0,
+    dep_th=-1.2, elev_th=1.5, bipolar_share=0.03, inertia=0.0,
 )
 ALL_OFF = dict(ratchet=False, goal_drive=False, hubris=False, loss_risk=False,
-               fraud=False, merit=False, merit_feedback=False)
+               fraud=False, merit=False, merit_feedback=False,
+               mood=False, precommit=False, regulate=False, delay=False)
+
+
+def mood_traits(N, rng, P=None, **over):
+    """Individual mood dynamics: set point, slow volatility and inertia, daily volatility, reactivity."""
+    P = {**DEFAULT, **(P or {})}
+    t = dict(m_set=rng.normal(0, 0.3, N),
+             m_vol=P["mood_vol"] * np.exp(rng.normal(0, 0.35, N)),
+             m_tau=P["mood_tau"] * np.exp(rng.normal(0, 0.3, N)),
+             d_sd=P["day_sd"] * np.exp(rng.normal(0, 0.3, N)),
+             m_eta=P["mood_eta"] * np.exp(rng.normal(0, 0.4, N)))
+    bip = rng.random(N) < P["bipolar_share"]
+    t["m_vol"][bip] = 1.1; t["m_tau"][bip] = 4.0; t["bipolar"] = bip.astype(float)
+    for k, val in over.items():
+        t[k] = np.broadcast_to(np.asarray(val, float), (N,)).copy()
+    return t
 
 
 def traits(N, rng, **over):
@@ -73,6 +94,18 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
     q_at_goal = np.full(N, np.nan); q_after_goal = np.full(N, np.nan); t_goal = np.full(N, -1)
     lev_hist, ret_hist = [], []
     traj = [] if record else None
+    use_mood = fl["mood"]
+    if use_mood:
+        rng_m = np.random.default_rng(seed + 999)          # separate stream: common random returns
+        m_vol = tr["m_vol"] * (0.7 if fl["regulate"] else 1.0)
+        d_sd = tr["d_sd"] * (0.7 if fl["regulate"] else 1.0)
+        m_eta = tr["m_eta"] * (0.5 if fl["regulate"] else 1.0)
+        a_ar = np.exp(-1.0 / tr["m_tau"])
+        m = tr["m_set"] + m_vol * rng_m.standard_normal(N)
+        in_dep = np.zeros(N, bool); run = np.zeros(N, int); dep_durs = []
+        n_dep = np.zeros(N, int); months_dep = np.zeros(N, int); months_elev = np.zeros(N, int)
+        ever_elev = np.zeros(N, bool); imp_hi = np.zeros(N, int); imp_lo = np.zeros(N, int)
+        m_sum = np.zeros(N); prev_ret = np.zeros(N)
     np.seterr(over="ignore", invalid="ignore", divide="ignore")
     for t in range(P["T"]):
         if windfall is not None and t == 0:
@@ -89,12 +122,41 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         t_goal[hit] = t; q_at_goal[hit] = q[hit]
         later = (t_goal >= 0) & (t == t_goal + 60)
         q_after_goal[later] = q[later]
+        # --- mood: slow AR(1) with outcome feedback and poverty stress; daily extremes
+        if use_mood:
+            push = m_eta * np.tanh(prev_ret / 0.05) - P["mood_pov"] * (K < 0.3)
+            # emotional inertia: dynamics slow down inside the low-mood region (Kuppens et al. 2010)
+            a_eff = np.where(m < P["dep_th"] + 0.5, np.exp(-1.0 / (tr["m_tau"] * (1 + P["inertia"]))), a_ar)
+            m = tr["m_set"] + a_eff * (m - tr["m_set"]) + push + m_vol * np.sqrt(1 - a_eff ** 2) * rng_m.standard_normal(N)
+            m = np.clip(m, -4, 4)
+            zhi = (P["theta_hi"] - m) / (d_sd * np.sqrt(2)); zlo = (m - P["theta_lo"]) / (d_sd * np.sqrt(2))
+            ph = 0.5 * (1 - _erf(zhi)); pl = 0.5 * (1 - _erf(zlo))
+            any_hi = rng_m.random(N) < 1 - (1 - ph) ** P["days"]
+            any_lo = rng_m.random(N) < 1 - (1 - pl) ** P["days"]
+            act = 0.0 if fl["delay"] else P["imp_act"]
+            hi_act = alive & any_hi & (rng_m.random(N) < act)
+            lo_act = alive & any_lo & (rng_m.random(N) < act)
+            imp_hi += hi_act; imp_lo += lo_act
+            q = np.clip(q * (1 + P["a_q"] * m), 0.0, 1.0)
+            # episodes
+            dep_now = m < P["dep_th"]; elev_now = m > P["elev_th"]
+            onset = dep_now & ~in_dep; n_dep += onset
+            ended = in_dep & ~dep_now
+            if ended.any():
+                dep_durs.extend(run[ended].tolist())
+            run = np.where(dep_now, run + 1, 0); in_dep = dep_now
+            months_dep += dep_now; months_elev += elev_now; ever_elev |= elev_now; m_sum += m
         # --- edge and leverage
-        mu = P["mu_max"] * q * tr["v"]
-        f = P["kelly_frac"] * c * mu / P["sigma"] ** 2
+        v_eff = tr["v"] * (np.clip(1 - P["a_v"] * m ** 2, 0.3, 1.0) if use_mood else 1.0)
+        mu = P["mu_max"] * q * v_eff
+        c_dec = c * (np.exp(P["a_c"] * m) if (use_mood and not fl["precommit"]) else 1.0)
+        f = P["kelly_frac"] * c_dec * mu / P["sigma"] ** 2
         dd = np.where(peak > 5.0, 1.0 - np.maximum(K, 0) / peak, 0.0)
         if fl["loss_risk"]:
             f = f * (1.0 + P["lam_loss"] * dd * (1 - tr["phi"]))
+        if use_mood and not fl["precommit"]:
+            f = np.where(hi_act, f * (1 + P["imp_mult"]), f)
+            f = np.where(lo_act, 0.0, f)
         f = np.clip(f, 0, P["f_cap"])
         f = np.where(K > 0, f, 0.0)
         # --- returns
@@ -107,7 +169,11 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
             # habit: spending can rise at once but falls back only at rate habit_decay
             H = np.maximum(cons, H * (1 - P["habit_decay"]))
             cons = H
+        if use_mood:
+            cons = cons + P["spree"] * np.maximum(m - 1.0, 0) * income + np.where(hi_act, P["spree"] * income, 0.0)
         give = tr["omega"] * (income + P["save_wealth_rate"] * np.maximum(K, 0)) if fl["merit"] else 0.0
+        if use_mood:
+            prev_ret = np.where(K > 0, invest / np.maximum(K, 1e-9), 0.0)
         K = np.where(alive, K + invest + net_income - cons - give, 0.0)
         if fl["merit"]:
             R = np.where(alive, R + give - P["rho_R"] * R, 0.0)
@@ -125,6 +191,8 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         # --- fraud and jail
         if fl["fraud"]:
             pf = P["fraud_pi"] * (1 - tr["iota"]) ** 2 * (1 - tr["phi"]) * np.maximum(0, dd - 0.3)
+            if use_mood:
+                pf = pf * (1 + P["a_f"] * np.maximum(-m, 0))
             new = alive & ~exposed & (peak > 5.0) & (rng.random(N) < pf)
             K = np.where(new, K + 0.3 * (peak - K), K)
             exposed |= new; frauds += new
@@ -150,7 +218,13 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
             lev_hist.append(f.copy()); ret_hist.append(K.copy())
         if record:
             traj.append(K.copy())
-    return dict(K=K, peak=peak, alive=alive, jailed_t=jailed_t, n_bankrupt=n_bankrupt,
+    mood_out = {}
+    if use_mood:
+        if in_dep.any():
+            dep_durs.extend(run[in_dep].tolist())
+        mood_out = dict(n_dep=n_dep, months_dep=months_dep, months_elev=months_elev, ever_elev=ever_elev,
+                        dep_durs=np.array(dep_durs), imp_hi=imp_hi, imp_lo=imp_lo, m_mean=m_sum / P["T"])
+    return dict(**mood_out, K=K, peak=peak, alive=alive, jailed_t=jailed_t, n_bankrupt=n_bankrupt,
                 t_first_bankrupt=t_first_bankrupt, ever_great=ever_great, t_great=t_great,
                 rescued=rescued, frauds=frauds, peak_c=peak_c, max_lev=max_lev, c=c, R=R,
                 q_at_goal=q_at_goal, q_after_goal=q_after_goal, t_goal=t_goal,

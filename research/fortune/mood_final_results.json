@@ -1,0 +1,288 @@
+{
+ "grid": [
+  {
+   "P": {
+    "mood_pov": 0.1,
+    "mood_vol": 0.42
+   },
+   "mood": {
+    "dep_lifetime": 0.14465,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.05145,
+    "dep_OR_poor_vs_rich": 1.768243871334517
+   },
+   "mood_n": 4,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.144
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.1,
+    "mood_vol": 0.4
+   },
+   "mood": {
+    "dep_lifetime": 0.1264,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.046,
+    "dep_OR_poor_vs_rich": 1.744341838989556
+   },
+   "mood_n": 4,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.143
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.12,
+    "mood_vol": 0.42
+   },
+   "mood": {
+    "dep_lifetime": 0.1602,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.0511,
+    "dep_OR_poor_vs_rich": 2.083495772317323
+   },
+   "mood_n": 4,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.144
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.12,
+    "mood_vol": 0.4
+   },
+   "mood": {
+    "dep_lifetime": 0.14155,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04565,
+    "dep_OR_poor_vs_rich": 2.111858022537816
+   },
+   "mood_n": 4,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.143
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.08,
+    "mood_vol": 0.42
+   },
+   "mood": {
+    "dep_lifetime": 0.1323,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.0514,
+    "dep_OR_poor_vs_rich": 1.4814999483654665
+   },
+   "mood_n": 4,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.144
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.08,
+    "mood_vol": 0.4
+   },
+   "mood": {
+    "dep_lifetime": 0.1152,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04615,
+    "dep_OR_poor_vs_rich": 1.4298962107719706
+   },
+   "mood_n": 3,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.143
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.06,
+    "mood_vol": 0.42
+   },
+   "mood": {
+    "dep_lifetime": 0.1241,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.0517,
+    "dep_OR_poor_vs_rich": 1.2731743992982674
+   },
+   "mood_n": 3,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.144
+    ]
+   ]
+  },
+  {
+   "P": {
+    "mood_pov": 0.06,
+    "mood_vol": 0.4
+   },
+   "mood": {
+    "dep_lifetime": 0.10745,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.04615,
+    "dep_OR_poor_vs_rich": 1.246217208344525
+   },
+   "mood_n": 2,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.143
+    ]
+   ]
+  }
+ ],
+ "chosen": {
+  "habit_decay": 0.004,
+  "mu_max": 0.02,
+  "sigma": 0.1,
+  "beta": 0.03,
+  "dep_th": -2.1,
+  "elev_th": 2.7,
+  "mood_vol": 0.42,
+  "mood_pov": 0.1,
+  "mood_tau": 6.0,
+  "inertia": 2.0,
+  "a_c": 0.15,
+  "imp_mult": 0.3,
+  "spree": 0.25,
+  "a_f": 0.3,
+  "kelly_frac": 0.5
+ },
+ "oos": [
+  {
+   "seed": 101,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.147
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.07425,
+    "rank_rank_slope": 0.46574375937102763,
+    "pareto_alpha": 1.2490753996323516,
+    "share_ever_great": 0.065825,
+    "great_then_fell": 0.12761109001139384,
+    "great_jailed": 0.014812001519179644,
+    "fallers_higher_conf": 0.4567767756675649,
+    "extrinsic_drive_drop": 0.0676514953103781,
+    "intrinsic_drive_drop": 0.014183337248373366,
+    "extr_minus_intr_drop": 0.053468158062004736,
+    "bankrupt_any": 0.0762,
+    "jailed_any": 0.012275,
+    "heirs_lost_half": 0.1475,
+    "heirs_bankrupt": 0.05266666666666667,
+    "heirs_jailed": 0.012333333333333333,
+    "heirs_median_final": 5037.32639400327
+   },
+   "mood": {
+    "dep_lifetime": 0.14435,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.0513,
+    "dep_OR_poor_vs_rich": 1.6515472123000463
+   },
+   "mood_n": 4
+  },
+  {
+   "seed": 202,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.148
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.078625,
+    "rank_rank_slope": 0.47545032708728163,
+    "pareto_alpha": 1.347309430812069,
+    "share_ever_great": 0.062525,
+    "great_then_fell": 0.13874450219912035,
+    "great_jailed": 0.011195521791283487,
+    "fallers_higher_conf": 0.3691818163014289,
+    "extrinsic_drive_drop": 0.06304236466752958,
+    "intrinsic_drive_drop": 0.010349277283871786,
+    "extr_minus_intr_drop": 0.05269308738365779,
+    "bankrupt_any": 0.07555,
+    "jailed_any": 0.0122,
+    "heirs_lost_half": 0.14766666666666667,
+    "heirs_bankrupt": 0.05516666666666667,
+    "heirs_jailed": 0.009833333333333333,
+    "heirs_median_final": 5008.746063772526
+   },
+   "mood": {
+    "dep_lifetime": 0.143175,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.051,
+    "dep_OR_poor_vs_rich": 1.7122926840263857
+   },
+   "mood_n": 4
+  },
+  {
+   "seed": 303,
+   "n": 9,
+   "fails": [
+    [
+     "heirs_lost_half",
+     0.134
+    ]
+   ],
+   "m": {
+    "mobility_Q1_to_Q5": 0.076625,
+    "rank_rank_slope": 0.4721710144447324,
+    "pareto_alpha": 1.2131008381550952,
+    "share_ever_great": 0.0659,
+    "great_then_fell": 0.11798179059180576,
+    "great_jailed": 0.013277693474962063,
+    "fallers_higher_conf": 0.3450993539118077,
+    "extrinsic_drive_drop": 0.0640770574184084,
+    "intrinsic_drive_drop": 0.01205045995544898,
+    "extr_minus_intr_drop": 0.052026597462959415,
+    "bankrupt_any": 0.076275,
+    "jailed_any": 0.01275,
+    "heirs_lost_half": 0.13366666666666666,
+    "heirs_bankrupt": 0.04516666666666667,
+    "heirs_jailed": 0.009,
+    "heirs_median_final": 5067.950709483015
+   },
+   "mood": {
+    "dep_lifetime": 0.143425,
+    "dep_median_months": 2.0,
+    "elev_lifetime": 0.052625,
+    "dep_OR_poor_vs_rich": 1.7786513115770008
+   },
+   "mood_n": 4
+  }
+ ]
+}
