@@ -19,8 +19,15 @@
 | U2b | L1->L2 | no-ignition zone iff B*cos^{2D}(phi) <= 1 (interruptions cap transmission) | exact | 4/4 cases | PASS |
 | U3 | L1->L3 | information rate scales with conversion squared: I(M q) = M^2 I(q) | exact | algebraic | PASS |
 | S1 | superego | rigid rules melt down; correction tied to hubris prevents meltdown | meltdown(rigid) > meltdown(tracking) | {'id': 1.0, 'rigid': 0.91, 'tracking': 0.0} | PASS |
+| R1 | rhythm | synchrony threshold K_c = 2*gamma (gamma=0.5 -> 1.0) | r(0.8)<0.1<r(1.2) | {0.8: 0.028, 1.2: 0.375, 2.0: 0.7, 3.0: 0.812} | PASS |
+| R2 | rhythm | partial-sync law r = sqrt(1 - K_c/K) | {2.0: 0.707, 3.0: 0.816} | {2.0: 0.7, 3.0: 0.812} | PASS |
+| T1 | time | delayed self-correction stable iff gain*delay < pi/2 | all cases | 57/57 | PASS |
+| T2 | time | explains reactor results: gain 0.4 x delay {1 ok, 4 and 10 fail} | consistent | True | PASS |
+| M1 | mirror | flattery delta shifts equilibrium confidence by beta*delta/gamma | {0.2: 1.4, 0.4: 1.8} | {0.0: 1.002, 0.2: 1.402, 0.4: 1.802} | PASS |
+| M2 | mirror | two-person mirror loop amplifies 1/(1-rho^2); explodes if rho>1 | 1.099,1.5625,5.263,inf | {0.3: 1.0989, 0.6: 1.5625, 0.9: 5.2632, 1.1: 'inf'} | PASS |
+| M3 | mirror | fortune model: more distorted mirror after success -> more falls (monotone) | increasing | [0.147, 0.31, 0.459] | PASS |
 | E101 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 19/20 | PASS |
 | E202 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 19/20 | PASS |
 | E303 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 18/20 | PASS |
 
-**20/20 passed**
+**27/27 passed**

@@ -137,6 +137,34 @@ m_r, s_r = life("rigid"); m_t, s_t = life("hubris-tracking"); m_i, s_i = life("i
 rec("S1", "superego", "rigid rules melt down; correction tied to hubris prevents meltdown",
     "meltdown(rigid) > meltdown(tracking)", dict(id=round(m_i, 3), rigid=round(m_r, 3), tracking=round(m_t, 3)), m_r > m_t + 0.3)
 
+# ===================== Rhythm, Time, Mirror layers
+import rhythm_time_mirror as rtm
+rK = {K: rtm.kuramoto_r(K) for K in (0.8, 1.2, 2.0, 3.0)}
+rec("R1", "rhythm", "synchrony threshold K_c = 2*gamma (gamma=0.5 -> 1.0)", "r(0.8)<0.1<r(1.2)",
+    {k: round(v, 3) for k, v in rK.items()}, rK[0.8] < 0.1 < rK[1.2])
+rec("R2", "rhythm", "partial-sync law r = sqrt(1 - K_c/K)", {2.0: 0.707, 3.0: 0.816},
+    {2.0: round(rK[2.0], 3), 3.0: round(rK[3.0], 3)}, abs(rK[2.0] - 0.707) < 0.03 and abs(rK[3.0] - 0.816) < 0.03)
+agree = tot = 0
+for g_ in np.linspace(0.1, 1.0, 10):
+    for d_ in (0.5, 1, 2, 3, 4, 6):
+        if abs(g_ * d_ - np.pi / 2) < 0.12: continue
+        tot += 1; agree += rtm.delay_stable(g_, d_) == (g_ * d_ < np.pi / 2)
+rec("T1", "time", "delayed self-correction stable iff gain*delay < pi/2", "all cases", f"{agree}/{tot}", agree == tot)
+rx = json.load(open(os.path.join(ROOT, "research", "criticality", "reactor_results.json")))["C"]["sweep"]
+cons = all((r_["p_sustained"] > 0.9) == (0.4 * r_["delay"] < np.pi / 2) for r_ in rx)
+rec("T2", "time", "explains reactor results: gain 0.4 x delay {1 ok, 4 and 10 fail}", "consistent", cons, cons)
+m1 = {d: rtm.confidence_eq(d) for d in (0.0, 0.2, 0.4)}
+rec("M1", "mirror", "flattery delta shifts equilibrium confidence by beta*delta/gamma", {0.2: 1.4, 0.4: 1.8},
+    {k: round(v, 3) for k, v in m1.items()}, abs(m1[0.2] - 1.4) < 0.02 and abs(m1[0.4] - 1.8) < 0.02)
+ml = {rho: rtm.mirror_loop(1.0, rho) for rho in (0.3, 0.6, 0.9, 1.1)}
+rec("M2", "mirror", "two-person mirror loop amplifies 1/(1-rho^2); explodes if rho>1", "1.099,1.5625,5.263,inf",
+    {k: (round(v, 4) if np.isfinite(v) else "inf") for k, v in ml.items()},
+    all(abs(ml[r_] - 1 / (1 - r_ ** 2)) < 1e-6 for r_ in (0.3, 0.6, 0.9)) and not np.isfinite(ml[1.1]))
+fp = rtm.fortune_psi(psis=(0.0, 0.5, 1.0), n=10000)
+falls = [fp[p_]["p_fall_given_great"] for p_ in (0.0, 0.5, 1.0)]
+rec("M3", "mirror", "fortune model: more distorted mirror after success -> more falls (monotone)", "increasing",
+    [round(x, 3) for x in falls], falls[0] < falls[1] < falls[2])
+
 # ===================== Empirical scorecard from the calibrated fortune model
 fc = json.load(open(os.path.join(FORT, "final_calibration.json")))
 for o in fc["oos"]:

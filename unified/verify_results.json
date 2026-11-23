@@ -185,6 +185,89 @@
   "passed": true
  },
  {
+  "id": "R1",
+  "layer": "rhythm",
+  "statement": "synchrony threshold K_c = 2*gamma (gamma=0.5 -> 1.0)",
+  "theory": "r(0.8)<0.1<r(1.2)",
+  "numeric": {
+   "0.8": 0.028,
+   "1.2": 0.375,
+   "2.0": 0.7,
+   "3.0": 0.812
+  },
+  "passed": true
+ },
+ {
+  "id": "R2",
+  "layer": "rhythm",
+  "statement": "partial-sync law r = sqrt(1 - K_c/K)",
+  "theory": {
+   "2.0": 0.707,
+   "3.0": 0.816
+  },
+  "numeric": {
+   "2.0": 0.7,
+   "3.0": 0.812
+  },
+  "passed": true
+ },
+ {
+  "id": "T1",
+  "layer": "time",
+  "statement": "delayed self-correction stable iff gain*delay < pi/2",
+  "theory": "all cases",
+  "numeric": "57/57",
+  "passed": true
+ },
+ {
+  "id": "T2",
+  "layer": "time",
+  "statement": "explains reactor results: gain 0.4 x delay {1 ok, 4 and 10 fail}",
+  "theory": "consistent",
+  "numeric": true,
+  "passed": true
+ },
+ {
+  "id": "M1",
+  "layer": "mirror",
+  "statement": "flattery delta shifts equilibrium confidence by beta*delta/gamma",
+  "theory": {
+   "0.2": 1.4,
+   "0.4": 1.8
+  },
+  "numeric": {
+   "0.0": 1.002,
+   "0.2": 1.402,
+   "0.4": 1.802
+  },
+  "passed": true
+ },
+ {
+  "id": "M2",
+  "layer": "mirror",
+  "statement": "two-person mirror loop amplifies 1/(1-rho^2); explodes if rho>1",
+  "theory": "1.099,1.5625,5.263,inf",
+  "numeric": {
+   "0.3": 1.0989,
+   "0.6": 1.5625,
+   "0.9": 5.2632,
+   "1.1": "inf"
+  },
+  "passed": true
+ },
+ {
+  "id": "M3",
+  "layer": "mirror",
+  "statement": "fortune model: more distorted mirror after success -> more falls (monotone)",
+  "theory": "increasing",
+  "numeric": [
+   0.147,
+   0.31,
+   0.459
+  ],
+  "passed": true
+ },
+ {
   "id": "E101",
   "layer": "empirical",
   "statement": "out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5)",
