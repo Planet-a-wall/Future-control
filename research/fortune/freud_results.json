@@ -1,0 +1,92 @@
+{
+ "baseline strong mind": {
+  "p_great": 0.07635,
+  "p_stay": 0.05175,
+  "p_fall_given_great": 0.32220039292730845,
+  "p_bankrupt": 0.22335,
+  "serial_bankruptcies": 29.537497201701367,
+  "p_jail": 0.0223,
+  "median_final": 3.0353021180671167,
+  "months_dep": 12.43785
+ },
+ "pleasure principle (hedonist, id)": {
+  "p_great": 0.0087,
+  "p_stay": 0.00265,
+  "p_fall_given_great": 0.6954022988505747,
+  "p_bankrupt": 0.37695,
+  "serial_bankruptcies": 24.238493168855285,
+  "p_jail": 0.0207,
+  "median_final": 0.740551525953277,
+  "months_dep": 16.8098
+ },
+ "reality principle (strong ego)": {
+  "p_great": 0.07885,
+  "p_stay": 0.0522,
+  "p_fall_given_great": 0.3379835129993659,
+  "p_bankrupt": 0.2348,
+  "serial_bankruptcies": 24.402257240204428,
+  "p_jail": 0.02365,
+  "median_final": 3.15566188904745,
+  "months_dep": 7.9905
+ },
+ "strict superego (guilt, anxiety)": {
+  "p_great": 0.01695,
+  "p_stay": 0.01655,
+  "p_fall_given_great": 0.02359882005899705,
+  "p_bankrupt": 0.14265,
+  "serial_bankruptcies": 41.82194181563267,
+  "p_jail": 5e-05,
+  "median_final": 6.367752746632233,
+  "months_dep": 23.4113
+ },
+ "sublimation (drive into work)": {
+  "p_great": 0.07295,
+  "p_stay": 0.0397,
+  "p_fall_given_great": 0.4557916381082934,
+  "p_bankrupt": 0.24405,
+  "serial_bankruptcies": 28.167383732841632,
+  "p_jail": 0.00415,
+  "median_final": 2.5007894052574717,
+  "months_dep": 12.4347
+ },
+ "id + narcissism (ego 0.7, low integrity, hedonist)": {
+  "p_great": 0.03495,
+  "p_stay": 0.00815,
+  "p_fall_given_great": 0.7668097281831188,
+  "p_bankrupt": 0.5776,
+  "serial_bankruptcies": 14.191222299168976,
+  "p_jail": 0.0688,
+  "median_final": 0.4888179762931996,
+  "months_dep": 21.64405
+ },
+ "law of attraction only (visualise, no plan)": {
+  "p_great": 0.0,
+  "p_stay": 0.0,
+  "p_fall_given_great": 0.0,
+  "p_bankrupt": 0.16365,
+  "serial_bankruptcies": 40.26245035135961,
+  "p_jail": 0.0009,
+  "median_final": 1.6804963791075909,
+  "months_dep": 3.6892
+ },
+ "attraction + action (MCII / act-as-if)": {
+  "p_great": 0.1053,
+  "p_stay": 0.07015,
+  "p_fall_given_great": 0.33380816714150047,
+  "p_bankrupt": 0.23275,
+  "serial_bankruptcies": 24.544790547798065,
+  "p_jail": 0.0249,
+  "median_final": 3.3359008202043654,
+  "months_dep": 5.81665
+ },
+ "repetition compulsion (no learning after ruin)": {
+  "p_great": 0.09555,
+  "p_stay": 0.04895,
+  "p_fall_given_great": 0.48770277341705914,
+  "p_bankrupt": 0.295,
+  "serial_bankruptcies": 22.521694915254237,
+  "p_jail": 0.0315,
+  "median_final": 1.6299975232905222,
+  "months_dep": 13.7587
+ }
+}

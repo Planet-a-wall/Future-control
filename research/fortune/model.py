@@ -35,7 +35,7 @@ DEFAULT = dict(
     goal_med=30.0, goal_sd=0.8, q_extr_free=0.7,
     lam_loss=1.5, fraud_pi=0.01, fraud_det=0.02,
     y_R=0.15, R_half=5.0, fb_gain=2.0, rho_R=0.01, rescue_p=0.6,
-    great=100.0, cap_tax=0.0, ret_prem=0.0, sat_k=3.0,
+    great=100.0, cap_tax=0.0, ret_prem=0.0, sat_k=3.0, hedon_gain=2.0,
     # --- mood module (multi-timescale mental state)
     mood_tau=6.0, mood_vol=0.5, mood_eta=0.15, mood_pov=0.10, a_q=0.3, a_c=0.3, a_v=0.1,
     spree=0.5, a_f=1.0, day_sd=0.6, days=22, theta_hi=2.0, theta_lo=-2.0, imp_act=0.3, imp_mult=1.0,
@@ -205,7 +205,7 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         if P["cap_tax"] > 0:          # tax on positive capital income
             invest = np.where(invest > 0, invest * (1 - P["cap_tax"]), invest)
         net_income = income + (P["y_R"] * R / (R + P["R_half"]) / 12.0 if fl["merit"] else 0.0)
-        cons = P["cons_income"] * income + P["save_wealth_rate"] * np.maximum(K, 0)
+        cons = P["cons_income"] * income + P["save_wealth_rate"] * np.maximum(K, 0) * (1 + P["hedon_gain"] * tr.get("hedon", 0.0))
         if fl["ratchet"]:
             # habit: spending can rise at once but falls back only at rate habit_decay
             H = np.maximum(cons, H * (1 - P["habit_decay"]))
@@ -250,7 +250,9 @@ def simulate(K0, tr, flags, seed=0, R0=0.0, P=None, windfall=None, record=False)
         t_first_bankrupt[first] = t
         n_bankrupt += ruin
         K = np.where(ruin, 0.0, K)
-        c = np.where(ruin, 1.0, c); H = np.where(ruin, P["cons_income"] * income, H)
+        if not fl.get("repeat"):      # learning after ruin; 'repeat' = repetition compulsion (Freud)
+            c = np.where(ruin, 1.0, c)
+        H = np.where(ruin, P["cons_income"] * income, H)
         peak = np.where(ruin, 0.0, np.maximum(peak, K))
         g_now = alive & (K >= P["great"]) & ~ever_great
         t_great[g_now] = t; ever_great |= g_now
