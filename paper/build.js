@@ -9,7 +9,11 @@ const { chromium } = require("playwright");
 
 const ROOT = __dirname;
 const NM = path.join(ROOT, "node_modules");
-const OUT = path.join(ROOT, "pdf");
+const SRC = process.env.SRC_DIR || ROOT;
+const OUT = process.env.OUT_DIR || path.join(ROOT, "pdf");
+const SERIES = process.env.SERIES || "Cumulative Intentional Order Theory (CIOT) · Research Proposal";
+const HDR = process.env.HDR || "CIOT · Research Proposal";
+const META = process.env.META || 'ฉบับร่างเพื่อเสนอการวิจัย · v2.0 · พฤศจิกายน 2569 · ผลเชิงตัวเลขทั้งหมดทำซ้ำได้ด้วย <code>paper/analysis.py</code>';
 const TMP = path.join(ROOT, ".build");
 fs.mkdirSync(OUT, { recursive: true });
 fs.mkdirSync(TMP, { recursive: true });
@@ -29,7 +33,7 @@ function inlineFigures(src, chap) {
   let k = 0;
   return src.replace(/<fig src="([^"]+)" cap="([^"]*)"(?: w="([^"]+)")?\s*\/>/g, (_, name, cap, w) => {
     k += 1;
-    let svg = fs.readFileSync(path.join(ROOT, "figures", name + ".svg"), "utf8");
+    let svg = fs.readFileSync(path.join(SRC, "figures", name + ".svg"), "utf8");
     svg = svg.replace(/<\?xml[^>]*>/, "").replace(/<!DOCTYPE[^>]*>/, "").replace(/<!--[\s\S]*?-->/g, "")
       .replace(/<svg([^>]*?)width="[^"]*"([^>]*?)height="[^"]*"/, "<svg$1$2");
     return `<figure style="width:${w || "100%"}">${svg}<figcaption><b>รูปที่ ${chap}.${k}</b> ${cap}</figcaption></figure>`;
@@ -100,16 +104,16 @@ function fontLinks() {
 }
 
 async function build(file, browser) {
-  let src = fs.readFileSync(path.join(ROOT, "chapters", file), "utf8");
+  let src = fs.readFileSync(path.join(SRC, "chapters", file), "utf8");
   const meta = JSON.parse(src.match(/<!--meta\s*([\s\S]*?)-->/)[1]);
   src = src.replace(/<!--meta[\s\S]*?-->/, "");
   src = inlineFigures(src, meta.num);
   src = renderMath(src);
   const html = `<!doctype html><html lang="th"><head><meta charset="utf-8">
 <title>CIOT ${meta.label || "บทที่ " + meta.num}: ${meta.title}</title>${fontLinks()}<style>${css}</style></head><body>
-<div class="cover"><div class="series">Cumulative Intentional Order Theory (CIOT) · Research Proposal</div>
+<div class="cover"><div class="series">${SERIES}</div>
 <div class="num">${meta.label || "บทที่ " + meta.num}</div><h1>${meta.title}</h1><div class="en">${meta.en}</div>
-<div class="meta">ฉบับร่างเพื่อเสนอการวิจัย · v2.0 · พฤศจิกายน 2569 · ผลเชิงตัวเลขทั้งหมดทำซ้ำได้ด้วย <code>paper/analysis.py</code></div></div>
+<div class="meta">${META}</div></div>
 ${src}</body></html>`;
   const htmlPath = path.join(TMP, file);
   fs.writeFileSync(htmlPath, html);
@@ -121,7 +125,7 @@ ${src}</body></html>`;
     path: path.join(OUT, pdfName), format: "A4", printBackground: true, preferCSSPageSize: true,
     displayHeaderFooter: true,
     headerTemplate: `<div style="font-size:7.5pt;color:#8A93A3;width:100%;padding:0 21mm;font-family:Loma,sans-serif;">
-      <span>CIOT · Research Proposal</span><span style="float:right">Chapter ${meta.num} — ${meta.en}</span></div>`,
+      <span>${HDR}</span><span style="float:right">Chapter ${meta.num} — ${meta.en}</span></div>`,
     footerTemplate: `<div style="font-size:8pt;color:#8A93A3;width:100%;text-align:center;font-family:Loma,sans-serif;">
       <span class="pageNumber"></span> / <span class="totalPages"></span></div>`,
   });
@@ -131,7 +135,7 @@ ${src}</body></html>`;
 
 (async () => {
   const only = process.argv.slice(2);
-  const files = fs.readdirSync(path.join(ROOT, "chapters")).filter(f => /^ch\d+\.html$/.test(f))
+  const files = fs.readdirSync(path.join(SRC, "chapters")).filter(f => /^ch\d+\.html$/.test(f))
     .filter(f => !only.length || only.includes(f.replace(".html", ""))).sort();
   const browser = await chromium.launch();
   for (const f of files) await build(f, browser);
