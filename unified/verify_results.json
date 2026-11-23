@@ -1,0 +1,203 @@
+[
+ {
+  "id": "Q1",
+  "layer": "L1",
+  "statement": "vision orthogonal to action never ignites without planning",
+  "theory": 0.0,
+  "numeric": 0.0,
+  "passed": true
+ },
+ {
+  "id": "Q2",
+  "layer": "L1",
+  "statement": "one reality-check step at 45 deg transmits 1/4",
+  "theory": 0.25,
+  "numeric": 0.25,
+  "passed": true
+ },
+ {
+  "id": "Q3",
+  "layer": "L1",
+  "statement": "Zeno law M_n ~ exp(-theta^2/n)",
+  "theory": "rel.err<1%",
+  "numeric": 0.0083,
+  "passed": true
+ },
+ {
+  "id": "Q4",
+  "layer": "L1",
+  "statement": "QQ equality holds for every 2-question quantum model",
+  "theory": 0.0,
+  "numeric": 4.440892098500626e-16,
+  "passed": true
+ },
+ {
+  "id": "B1",
+  "layer": "L2",
+  "statement": "entropy of cascade sizes is maximal at k=1",
+  "theory": "argmax=1.0",
+  "numeric": 1.0,
+  "passed": true
+ },
+ {
+  "id": "B2",
+  "layer": "L2",
+  "statement": "survival of k=1.2 cascade = 1 - q*, q*=exp(k(q*-1))",
+  "theory": 0.314,
+  "numeric": 0.315,
+  "passed": true
+ },
+ {
+  "id": "B3",
+  "layer": "L2",
+  "statement": "prompt-critical cliff: period drops >30x across rho=beta (0.77->1.23 beta)",
+  "theory": ">30x",
+  "numeric": 58.4,
+  "passed": true
+ },
+ {
+  "id": "K1c1",
+  "layer": "L3",
+  "statement": "g = I - KL(belief||truth) at c=1.0",
+  "theory": 0.0054,
+  "numeric": 0.0054,
+  "passed": true
+ },
+ {
+  "id": "K1c2",
+  "layer": "L3",
+  "statement": "g = I - KL(belief||truth) at c=2.0",
+  "theory": 0.0072,
+  "numeric": 0.0072,
+  "passed": true
+ },
+ {
+  "id": "K1c3",
+  "layer": "L3",
+  "statement": "g = I - KL(belief||truth) at c=3.0",
+  "theory": 0.0054,
+  "numeric": 0.0054,
+  "passed": true
+ },
+ {
+  "id": "K2",
+  "layer": "L3",
+  "statement": "hubris threshold: growth=0 at kappa*c=2 (continuous) ",
+  "theory": 4.0,
+  "numeric": 3.8,
+  "passed": true
+ },
+ {
+  "id": "K3",
+  "layer": "L3",
+  "statement": "mood-volatility penalty = I*kappa^2*Var(c) (penalty vs flat c, same returns)",
+  "theory": {
+   "0.25": 0.135,
+   "0.5": 0.54,
+   "0.75": 1.215
+  },
+  "numeric": {
+   "0.25": 0.141,
+   "0.5": 0.575,
+   "0.75": 1.311
+  },
+  "passed": true
+ },
+ {
+  "id": "U1",
+  "layer": "L2=L3",
+  "statement": "reactor criticality k=1 coincides with Kelly hubris threshold kappa*c=2",
+  "theory": 4.0,
+  "numeric": 4.0,
+  "passed": true
+ },
+ {
+  "id": "U2",
+  "layer": "L1->L2",
+  "statement": "ignition: planning steps n >= theta^2/ln(b)",
+  "theory": "|exact-approx|<=1",
+  "numeric": [
+   [
+    1.5,
+    60,
+    3,
+    3
+   ],
+   [
+    1.5,
+    90,
+    7,
+    7
+   ],
+   [
+    2.0,
+    60,
+    2,
+    2
+   ],
+   [
+    2.0,
+    90,
+    4,
+    4
+   ],
+   [
+    4.0,
+    60,
+    1,
+    1
+   ],
+   [
+    4.0,
+    90,
+    2,
+    2
+   ]
+  ],
+  "passed": true
+ },
+ {
+  "id": "U3",
+  "layer": "L1->L3",
+  "statement": "information rate scales with conversion squared: I(M q) = M^2 I(q)",
+  "theory": "exact",
+  "numeric": "algebraic",
+  "passed": true
+ },
+ {
+  "id": "S1",
+  "layer": "superego",
+  "statement": "rigid rules melt down; correction tied to hubris prevents meltdown",
+  "theory": "meltdown(rigid) > meltdown(tracking)",
+  "numeric": {
+   "id": 1.0,
+   "rigid": 0.91,
+   "tracking": 0.0
+  },
+  "passed": true
+ },
+ {
+  "id": "E101",
+  "layer": "empirical",
+  "statement": "out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5)",
+  "theory": ">=18/20",
+  "numeric": "19/20",
+  "passed": true
+ },
+ {
+  "id": "E202",
+  "layer": "empirical",
+  "statement": "out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5)",
+  "theory": ">=18/20",
+  "numeric": "19/20",
+  "passed": true
+ },
+ {
+  "id": "E303",
+  "layer": "empirical",
+  "statement": "out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5)",
+  "theory": ">=18/20",
+  "numeric": "18/20",
+  "passed": true
+ }
+]
