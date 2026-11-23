@@ -1,0 +1,354 @@
+{
+ "base_n_min": {
+  "30": {
+   "1.1": 3,
+   "1.5": 1,
+   "2.0": 1,
+   "4.0": 1
+  },
+  "45": {
+   "1.1": 7,
+   "1.5": 2,
+   "2.0": 1,
+   "4.0": 1
+  },
+  "60": {
+   "1.1": 12,
+   "1.5": 3,
+   "2.0": 2,
+   "4.0": 1
+  },
+  "75": {
+   "1.1": 18,
+   "1.5": 5,
+   "2.0": 3,
+   "4.0": 2
+  },
+  "90": {
+   "1.1": 26,
+   "1.5": 7,
+   "2.0": 4,
+   "4.0": 2
+  }
+ },
+ "interruptions": {
+  "0": {
+   "effective_B": 2.0,
+   "n_min_60deg": 2
+  },
+  "5": {
+   "effective_B": 1.7161078794465638,
+   "n_min_60deg": 3
+  },
+  "20": {
+   "effective_B": 1.0841474545189893,
+   "n_min_60deg": 14
+  },
+  "60": {
+   "effective_B": 0.3185701441656756,
+   "n_min_60deg": null
+  }
+ },
+ "profiles": {
+  "office worker, phone always on": {
+   "none": {
+    "theta_eff_deg": 70.0,
+    "B": 1.336,
+    "D": 30,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3649639841121323
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 64.0,
+    "B": 1.4160000000000001,
+    "D": 30,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.41198735610484866
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 70.0,
+    "B": 1.336,
+    "D": 6,
+    "zone": false,
+    "n_min": 15,
+    "k_with_3_step_plan": 0.7609918022128763
+   },
+   "calm practice": {
+    "theta_eff_deg": 66.5,
+    "B": 1.336,
+    "D": 30,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3789094647777268
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 70.0,
+    "B": 2.004,
+    "D": 30,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5474459761681985
+   },
+   "all four": {
+    "theta_eff_deg": 60.5,
+    "B": 2.1240000000000006,
+    "D": 6,
+    "zone": false,
+    "n_min": 3,
+    "k_with_3_step_plan": 1.3331602611668463
+   }
+  },
+  "student before exams": {
+   "none": {
+    "theta_eff_deg": 72.0,
+    "B": 1.1381999999999999,
+    "D": 25,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.35435791210035955
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 63.0,
+    "B": 1.2431999999999999,
+    "D": 25,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.42575354008876354
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 72.0,
+    "B": 1.1381999999999999,
+    "D": 5,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.6537079631065128
+   },
+   "calm practice": {
+    "theta_eff_deg": 66.5,
+    "B": 1.1381999999999999,
+    "D": 25,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.37621229712455034
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 72.0,
+    "B": 1.7072999999999996,
+    "D": 25,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5315368681505392
+   },
+   "all four": {
+    "theta_eff_deg": 57.5,
+    "B": 1.8647999999999998,
+    "D": 5,
+    "zone": false,
+    "n_min": 3,
+    "k_with_3_step_plan": 1.2405979235782798
+   }
+  },
+  "content creator (high reach)": {
+   "none": {
+    "theta_eff_deg": 58.5,
+    "B": 2.496,
+    "D": 40,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5635402198396899
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 52.50000000000001,
+    "B": 2.646,
+    "D": 40,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.6291284970757182
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 58.5,
+    "B": 2.496,
+    "D": 8,
+    "zone": false,
+    "n_min": 2,
+    "k_with_3_step_plan": 1.501175759633609
+   },
+   "calm practice": {
+    "theta_eff_deg": 55.0,
+    "B": 2.496,
+    "D": 40,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5812177777653003
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 58.5,
+    "B": 3.7439999999999998,
+    "D": 40,
+    "zone": false,
+    "n_min": 11,
+    "k_with_3_step_plan": 0.8453103297595348
+   },
+   "all four": {
+    "theta_eff_deg": 49.0,
+    "B": 3.969,
+    "D": 8,
+    "zone": false,
+    "n_min": 1,
+    "k_with_3_step_plan": 2.5839416577756107
+   }
+  },
+  "early-stage founder": {
+   "none": {
+    "theta_eff_deg": 84.4,
+    "B": 2.0025,
+    "D": 20,
+    "zone": false,
+    "n_min": 27,
+    "k_with_3_step_plan": 0.6230329272303323
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 75.4,
+    "B": 2.19,
+    "D": 20,
+    "zone": false,
+    "n_min": 11,
+    "k_with_3_step_plan": 0.763803486304711
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 84.4,
+    "B": 2.0025,
+    "D": 4,
+    "zone": false,
+    "n_min": 4,
+    "k_with_3_step_plan": 1.0168673724758788
+   },
+   "calm practice": {
+    "theta_eff_deg": 79.7,
+    "B": 2.0025,
+    "D": 20,
+    "zone": false,
+    "n_min": 24,
+    "k_with_3_step_plan": 0.6624747854419109
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 84.4,
+    "B": 3.0037499999999997,
+    "D": 20,
+    "zone": false,
+    "n_min": 5,
+    "k_with_3_step_plan": 0.9345493908454984
+   },
+   "all four": {
+    "theta_eff_deg": 70.7,
+    "B": 3.285,
+    "D": 4,
+    "zone": false,
+    "n_min": 2,
+    "k_with_3_step_plan": 1.9739644951470052
+   }
+  },
+  "gig worker, two jobs": {
+   "none": {
+    "theta_eff_deg": 83.4,
+    "B": 1.0010000000000001,
+    "D": 15,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3678490706051798
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 71.4,
+    "B": 1.131,
+    "D": 15,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.48150326986157627
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 83.4,
+    "B": 1.0010000000000001,
+    "D": 3,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5311713567882292
+   },
+   "calm practice": {
+    "theta_eff_deg": 78.7,
+    "B": 1.0010000000000001,
+    "D": 15,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3908176484246048
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 83.4,
+    "B": 1.5015000000000003,
+    "D": 15,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.5517736059077697
+   },
+   "all four": {
+    "theta_eff_deg": 66.7,
+    "B": 1.6965000000000001,
+    "D": 3,
+    "zone": false,
+    "n_min": 4,
+    "k_with_3_step_plan": 1.0974818091172258
+   }
+  },
+  "dreamer (vision only)": {
+   "none": {
+    "theta_eff_deg": 86.0,
+    "B": 1.3035,
+    "D": 20,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3968191393679084
+   },
+   "sleep 7.5h": {
+    "theta_eff_deg": 83.0,
+    "B": 1.341,
+    "D": 20,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.4250914906074027
+   },
+   "phone-free focus blocks": {
+    "theta_eff_deg": 86.0,
+    "B": 1.3035,
+    "D": 4,
+    "zone": false,
+    "n_min": 16,
+    "k_with_3_step_plan": 0.6476582825100156
+   },
+   "calm practice": {
+    "theta_eff_deg": 86.0,
+    "B": 1.3035,
+    "D": 20,
+    "zone": true,
+    "n_min": null,
+    "k_with_3_step_plan": 0.3968191393679084
+   },
+   "better environment (b +50%)": {
+    "theta_eff_deg": 86.0,
+    "B": 1.95525,
+    "D": 20,
+    "zone": false,
+    "n_min": 39,
+    "k_with_3_step_plan": 0.5952287090518625
+   },
+   "all four": {
+    "theta_eff_deg": 83.0,
+    "B": 2.0115,
+    "D": 4,
+    "zone": false,
+    "n_min": 4,
+    "k_with_3_step_plan": 1.0407034240647748
+   }
+  }
+ }
+}

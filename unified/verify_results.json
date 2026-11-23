@@ -157,6 +157,14 @@
   "passed": true
  },
  {
+  "id": "U2b",
+  "layer": "L1->L2",
+  "statement": "no-ignition zone iff B*cos^{2D}(phi) <= 1 (interruptions cap transmission)",
+  "theory": "exact",
+  "numeric": "4/4 cases",
+  "passed": true
+ },
+ {
   "id": "U3",
   "layer": "L1->L3",
   "statement": "information rate scales with conversion squared: I(M q) = M^2 I(q)",

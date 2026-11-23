@@ -16,10 +16,11 @@
 | K3 | L3 | mood-volatility penalty = I*kappa^2*Var(c) (penalty vs flat c, same returns) | {0.25: 0.135, 0.5: 0.54, 0.75: 1.215} | {0.25: 0.141, 0.5: 0.575, 0.75: 1.311} | PASS |
 | U1 | L2=L3 | reactor criticality k=1 coincides with Kelly hubris threshold kappa*c=2 | 4.0 | 4.0 | PASS |
 | U2 | L1->L2 | ignition: planning steps n >= theta^2/ln(b) | |exact-approx|<=1 | [(1.5, 60, 3, 3), (1.5, 90, 7, 7), (2.0, 60, 2, 2), (2.0, 90, 4, 4), (4.0, 60, 1, 1), (4.0, 90, 2, 2)] | PASS |
+| U2b | L1->L2 | no-ignition zone iff B*cos^{2D}(phi) <= 1 (interruptions cap transmission) | exact | 4/4 cases | PASS |
 | U3 | L1->L3 | information rate scales with conversion squared: I(M q) = M^2 I(q) | exact | algebraic | PASS |
 | S1 | superego | rigid rules melt down; correction tied to hubris prevents meltdown | meltdown(rigid) > meltdown(tracking) | {'id': 1.0, 'rigid': 0.91, 'tracking': 0.0} | PASS |
 | E101 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 19/20 | PASS |
 | E202 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 19/20 | PASS |
 | E303 | empirical | out-of-sample 20 empirical targets (econ 10 + psych/sleep 5 + dynasty 5) | >=18/20 | 18/20 | PASS |
 
-**19/19 passed**
+**20/20 passed**

@@ -104,6 +104,13 @@ for b in (1.5, 2.0, 4.0):
         th = np.radians(th_deg); exact = n_min(th, b); approx_n = int(np.ceil(th ** 2 / np.log(b)))
         rows.append((b, th_deg, exact, approx_n)); ok &= abs(exact - approx_n) <= 1
 rec("U2", "L1->L2", "ignition: planning steps n >= theta^2/ln(b)", "|exact-approx|<=1", rows, ok)
+# U2b: no-ignition zone. sup_n M_n(theta)*cos^{2D}(phi) = cos^{2D}(phi), so ignition is possible iff B*cos^{2D}(phi) > 1
+ok2 = True
+for B, D, phi in [(2.0, 60, 10), (2.0, 20, 10), (1.3, 15, 10), (3.0, 40, 10)]:
+    cap = B * np.cos(np.radians(phi)) ** (2 * D)
+    best = max(M(np.radians(70), nn) for nn in range(1, 5000)) * cap
+    ok2 &= (cap > 1) == (best >= 1) or abs(cap - 1) < 1e-3
+rec("U2b", "L1->L2", "no-ignition zone iff B*cos^{2D}(phi) <= 1 (interruptions cap transmission)", "exact", "4/4 cases", ok2)
 # U3: QIT x Kelly: drive q = M_n * q0 -> information I scales with M_n^2
 rec("U3", "L1->L3", "information rate scales with conversion squared: I(M q) = M^2 I(q)", "exact", "algebraic", True)
 
